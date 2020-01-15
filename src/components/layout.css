@@ -830,11 +830,10 @@ footer {
 
 .hero-band h1 {
   color: #1900BD;
-  text-shadow: 1px 1px 0 #FFBD2E,
-              -1px -1px 0 #FFBD2E,
+  text-shadow: 1px 1px 1px #FFBD2E,
+              -1px -1px 1px #FFBD2E,
               -2px -2px 2px #FAA546,
               2px 2px 2px #887000;
-
 }
 
 .hero-band p {
