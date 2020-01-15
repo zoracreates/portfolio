@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header className={`wrapper-lg`}>
-    <div>
-      <a href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a>
-      <ul>
+const Footer = ({ siteTitle }) => (
+  <footer className={`${`dark-gray`}`}>
+     <p className={`${`wrapper-lg`}`}>© Zoraida Cabrera-Mieles 2020</p>
+      <ul className={`${`wrapper-lg`}`}>
+        <li><a href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a></li>
         <li>
           <a href={`https://github.com/zoracreates`}>Github</a>
         </li>
@@ -22,8 +22,8 @@ const Header = ({ siteTitle }) => (
           <Link to="/blog">Blog</Link>
        </li>
       </ul>
-    </div>
-  </header>
+
+  </footer>
 )
 
-export default Header
+export default Footer
