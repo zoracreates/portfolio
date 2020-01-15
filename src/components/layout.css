@@ -735,14 +735,15 @@ a {
   color: #1900BD;
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px dotted #1900BD;
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #1900BD;
 }
 
 a.btn {
-  color: #fff;
+  color: #1900BD;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
@@ -750,27 +751,21 @@ a.btn {
   margin: 20px 0;
   padding: 20px;
   width: fit-content;
-  background-color: #0074C2;
+  background-color: #FFBD2E;
   transition: 0.09s ease-in;
-  box-shadow: -2px -2px 2px #FFFFFF,
-               2px 2px 2px #C9C5C5,
-              inset 1px 1px 0px #0F9FFF,
-              inset -1px -1px 0px #0F9FFF;
-  border: 1px solid #EFEEEE;
+  box-shadow: -2px -2px 2px #FAFAFA,
+               2px 2px 2px #B3B3B3;
+  border: 1px solid #755000;
   border-radius: 4px;
 }
 
 a.btn:hover {
   text-decoration: underline;
-  background: #0068AD;
-  box-shadow: 2px 2px 2px #FFF,
-              -2px -2px 2px #C9C5C5,
-              inset 2px 2px 5px #005B99,
-              inset -2px -2px 5px #005B99;
-  border-left: 1px solid #C9C5C5;
-  border-top: 1px solid #C9C5C5;
-  border-right:  1px solid #FFF;
-  border-bottom:  1px solid #FFF;
+  background-color: #FFBA24;
+  border: 1px solid #755000;;
+  box-shadow: 1px 1px 2px #FFF,
+              -1px -1px 2px #D6D4D4,
+              inset 0px 1px 2px #855D05;
 }
 
 @media (min-width: 768px) {
