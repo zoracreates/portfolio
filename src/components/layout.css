@@ -682,10 +682,12 @@ footer ul li  {
 }
 
 
-.profile-text {
+p.hero-text {
   font-size: 1.38316rem;
   line-height: 1.2;
+  font-weight: bold;
 }
+
 .cols-1-3 .col {
   padding-top: 35px;
 }
@@ -771,7 +773,6 @@ a.btn:hover {
   border-bottom:  1px solid #FFF;
 }
 
-
 @media (min-width: 768px) {
   .cols-1-3 {
     display: flex;
@@ -786,7 +787,6 @@ a.btn:hover {
     flex-basis: 20%;
   }
 
-  
 
   @supports (display:grid) {
     .cols-1-3 {
@@ -818,7 +818,6 @@ footer {
 
 }
 
-
 .blue-band a {
   color: #EFEEEE;
   font-weight: bold;
@@ -829,19 +828,26 @@ footer {
   text-decoration: none;
 }
 
-
 .hero-band {
   margin-top: -150px;
   padding-top: 150px;
 }
 
+.hero-band h1 {
+  color: #1900BD;
+  text-shadow: 1px 1px 0 #FFBD2E,
+              -1px -1px 0 #FFBD2E,
+              -2px -2px 2px #FAA546,
+              2px 2px 2px #887000;
+
+}
+
+.hero-band p {
+  max-width: 700px;
+}
 
 @media (min-width: 768px) {
   .hero-band h1 {
     font-size: 100px;
   }
-}
-
-.hero-band p {
-  max-width: 700px;
 }

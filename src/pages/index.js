@@ -14,7 +14,7 @@ const IndexPage = () => (
       <div className={`gradient-band hero-band`}>
         <WrapperLg>
           <h1>I'm Zoraida, Designer/Researcher</h1>
-          <p className={`profile-text`}>
+          <p className={`hero-text`}>
             I’m currently  working at Harvard University, 
             doing quantitative and qualitative research, 
             ideating layouts and flows with clients, and theming websites with CSS and a sprinkle of JavaScript.
