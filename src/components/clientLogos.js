@@ -55,7 +55,6 @@ const ClientLogos = () => {
         else {
             return images = null;
         }
-
     }
 
     return (

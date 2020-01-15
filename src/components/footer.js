@@ -22,7 +22,6 @@ const Footer = ({ siteTitle }) => (
           <Link to="/blog">Blog</Link>
        </li>
       </ul>
-
   </footer>
 )
 
