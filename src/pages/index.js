@@ -13,7 +13,7 @@ const IndexPage = () => (
     <main>
       <div className={`gradient-band hero-band`}>
         <WrapperLg>
-          <h1>I'm Zoraida, Designer/Researcher</h1>
+          <h1>I'm Zoraida, <br/> UX Designer + Researcher</h1>
           <p className={`hero-text`}>
             I’m currently  working at Harvard University, 
             doing quantitative and qualitative research, 

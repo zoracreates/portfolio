@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const Header = ({ siteTitle }) => (
   <header className={`wrapper-lg`}>
     <div>
-      <a href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a>
+      <a  href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a>
       <ul>
         <li>
           <a href={`https://github.com/zoracreates`}>Github</a>
@@ -18,10 +18,9 @@ const Header = ({ siteTitle }) => (
        <li>
           <a href={`https://medium.com/@zoracreates`}>Medium</a>
        </li>
-       <li>
-          <Link to="/blog">Blog</Link>
-       </li>
       </ul>
+      <p><Link className={`text-btn`} to="/blog">Read Blog</Link></p>
+      
     </div>
   </header>
 )
