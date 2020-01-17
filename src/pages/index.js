@@ -22,9 +22,10 @@ const IndexPage = () => (
         </WrapperLg>
       </div>
 
+    <div className={`sunflower`}> 
       <WrapperLg>
         <div className={`${`cols-1-3 band`}`}>
-          <section className={`col`}>
+          <section className={`card col`}>
             <h2>Read My Thoughts</h2>
             <ul>
               <li>
@@ -43,7 +44,7 @@ const IndexPage = () => (
             </ul>
           </section>
 
-          <section className={`col`}>
+          <section className={`card col`}>
             <h2>Hear Me Speak</h2>
             <ul>
               <li>
@@ -70,6 +71,7 @@ const IndexPage = () => (
           </section>
         </div>
       </WrapperLg>
+      </div>
 
       <ClientLogos />
 

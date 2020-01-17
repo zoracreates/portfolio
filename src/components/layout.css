@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap');
 
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -635,7 +634,7 @@ html {
 
 .wrapper-lg {
   width: 92%;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -707,6 +706,7 @@ p.hero-text {
 .card {
   padding: 20px;
   border-radius: 2px;
+  background-color: #EDEDED;
 }
 
 .raised-card {
@@ -844,4 +844,13 @@ footer {
   .hero-band h1 {
     font-size: 100px;
   }
+}
+
+.sunflower {
+  background: url('../images/sunflower.jpg');
+  max-width: 2000px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 0;
 }
