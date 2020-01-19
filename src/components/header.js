@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import SocialIcons from "./socialIcons"
+import SocialIcons from "../content/socialIcons"
 import Logo from "../images/z-logo.png"
+import PropTypes from "prop-types"
 
-const Header = ({ siteTitle }) => (
+const Header = ({active}) => (
   <header className={`wrapper-lg`}>
     <div className={`logo`}>
       <Link to="/">
@@ -14,9 +15,15 @@ const Header = ({ siteTitle }) => (
     <div>
       <a  href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a>
       <SocialIcons />
-      <p><Link className={`text-btn`} to="/blog">Read Blog</Link></p>
+      {active === 'home' &&  <p><Link className={`text-btn-fwd`} to="/">Read Blog</Link></p>}
+      {active === 'blog' &&  <p><Link className={`text-btn-back`} to="/blog">Back Home</Link></p>}
+      {active === 'post' &&  <p><Link className={`text-btn-back`} to="/blog">Back to Recent Posts</Link></p>}
     </div>
   </header>
 )
+
+Header.prototypes = {
+  active: PropTypes.string.isRequired
+}
 
 export default Header

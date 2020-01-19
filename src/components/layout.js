@@ -12,10 +12,10 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, active }) => {
   return (
     <>
-      <Header  />
+      <Header active={active}  />
         {children}
       <Footer />
     </>
@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  active: PropTypes.string.isRequired
 }
 
 export default Layout
