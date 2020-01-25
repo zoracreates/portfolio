@@ -58,7 +58,7 @@ const ClientLogos = () => {
     }
 
     return (
-        <div className={`dark-gray`}>
+        <div className={`inset`}>
             {images &&
                 <CenterTextBand sectionTitle="Trusted By">
                     <div className={`cols-2-4`}>

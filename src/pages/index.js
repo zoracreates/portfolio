@@ -9,39 +9,53 @@ import Writing from "../content/writing"
 import Speaking from "../content/speaking"
 import CTA from "../content/cta"
 import Airtable from "../content/airtable"
+import Me from "../images/me.png"
 
 
 const IndexPage = () => (
   <Layout active={'home'}>
     <SEO title="Home" />
     <main>
-      <div className={`gradient-band hero-band`}>
+      <div className={`hero-band hero-band`}>
         <WrapperLg>
-          <h1>I'm Zoraida, <br/> UX Designer + Researcher</h1>
+          <h1>I'm Zoraida, <br /> UX Designer &amp; Researcher</h1>
           <p className={`hero-text`}>
-            I’m currently  working at Harvard University, 
-            doing quantitative and qualitative research, 
-            ideating layouts and flows with clients, and theming websites with CSS and a sprinkle of JavaScript.
+            I’m currently  working at Harvard University,
+            conducting research, facilitating design workshops, establishing visual guidelines for websites,
+            and theming with CSS and a sprinkle of JavaScript.
           </p>
         </WrapperLg>
       </div>
 
-    <div className={`sunflower`}> 
-      <WrapperLg>
-        <div className={`${`cols-1-3 band`}`}>
+      <div>
+        <WrapperLg>
+          <div className={`${`cols-1-3 band`}`}>
 
-          <Writing styleName={'card col'} />
+            <Writing styleName={'col'} />
 
-          <Speaking styleName={'card col'} />
+            <Speaking styleName={'col'} />
 
-          <CTA styleName={'card col'} />
-        </div>
-      </WrapperLg>
-    </div>
+            <CTA styleName={'raised-card col'} />
+          </div>
+        </WrapperLg>
+      </div>
 
       <ClientLogos />
+      <WrapperLg  styleName={`cols-1-2 band about-band`}>
+       <div className={`col`}>
+        <h2>My Story</h2>
+        <p>I am a driven creative who enjoys learning new skills and working in collaborative teams.
+          I love being involved in the entire design process, from research, to sketching and wireframing,
+  to prototyping in different fidelities. Currently I am a UX Designer/Researcher for Harvard University Information Technology, where my work helps improve university life and productivity.</p>
+        <p>I became a designer after a few years of working as a Museum Educator and as an e-commerce Customer Support Representative. These experiences made me passionate about customer advocacy and technology in education. I began my design journey by teaching myself to design and code. Later I formalized my learning by pursuing a Digital Media Design Masters at Harvard University's Extension School.</p>
+        </div>
+        <div className={`col img`}>
+          <img src={Me} />
 
-      <Airtable />
+        
+        </div>
+      </WrapperLg>
+      {/* <Airtable /> */}
     </main>
   </Layout>
 )
