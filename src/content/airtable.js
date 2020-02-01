@@ -4,7 +4,7 @@ import {CenterTextBand } from "../components/wrappers"
 
 const Airtable = ({styleName}) => {
     return (
-        <CenterTextBand sectionTitle="Because Sharing is Caring..." className={styleName} >
+        <CenterTextBand sectionTitle="Because Sharing is Caring..." styleName={styleName}>
         <p>I use Airtable to organize my design, research, and programming resources.
         If you find it helpful, <a href={`https://twitter.com/zoracreates/`}>tweet @zoracreates</a>, I'd love to know!</p>
         <h3>Master List of Design, Research, and Programming Resources</h3>

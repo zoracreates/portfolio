@@ -55,7 +55,6 @@ const IndexPage = () => (
         
         </div>
       </WrapperLg>
-      {/* <Airtable /> */}
     </main>
   </Layout>
 )
