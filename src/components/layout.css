@@ -746,7 +746,7 @@ p.hero-text {
 @supports (display: grid) {
   .cols-2-4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10%;
   }
 }
@@ -907,7 +907,8 @@ a.text-btn-back:hover::before {
 }
 
 .about-band img {
-vertical-align: bottom;
+  vertical-align: bottom; 
+  max-width: 500px;
 }
 
 footer {
