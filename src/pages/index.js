@@ -8,7 +8,6 @@ import ClientLogos from "../content/clientLogos"
 import Writing from "../content/writing"
 import Speaking from "../content/speaking"
 import CTA from "../content/cta"
-import Airtable from "../content/airtable"
 import Me from "../images/me.png"
 
 
