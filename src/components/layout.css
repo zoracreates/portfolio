@@ -781,9 +781,6 @@ p.hero-text {
   background-color: #E7E7E7;
 }
 
-.inset:last-of-type {
-  box-shadow: inset 2px 2px 4px #C9C5C5;
-}
 
 .light-gray {
   background-color: #EDEDED;
