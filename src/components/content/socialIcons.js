@@ -1,8 +1,8 @@
 import React from "react"
-import Gitbub from "../images/social/github.png"
-import Twiter from "../images/social/twitter.png"
-import LinkedIn from "../images/social/linkedin.png"
-import Medium from "../images/social/medium.png"
+import Gitbub from "../../images/social/github.png"
+import Twiter from "../../images/social/twitter.png"
+import LinkedIn from "../../images/social/linkedin.png"
+import Medium from "../../images/social/medium.png"
 
 
 const SocialIcons = () => {

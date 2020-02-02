@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import { CenterTextBand } from "../components/wrappers"
+import { CenterTextBand } from "../wrappers"
 
 const getImageFiles = graphql`
     query {

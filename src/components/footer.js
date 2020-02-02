@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import SocialIcons from "../content/socialIcons"
+import SocialIcons from "./content/socialIcons"
 
 const Footer = ({ siteTitle }) => (
   <footer className={`${`dark-gray`}`}>

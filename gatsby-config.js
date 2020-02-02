@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Zoraida Cabrera-Mieles — Designer/Researcher who codes`,
+    title: `Zoraida Cabrera-Mieles — Designer & Researcher`,
     description: `Zoraida Cabrera-Mieles User Experience Designer portfolio`,
     author: `@zoracreates`,
     keywords:  `UX, User Experience, User Interface, User Research, Designer, HTML, CSS, JavaScript, Zoraida Cabrera-Mieles, Zoraida Cabrera"`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
