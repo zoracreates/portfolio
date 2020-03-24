@@ -49,7 +49,7 @@ const IndexPage = () => (
         <p>I became a designer after a few years of working as a Museum Educator and as an e-commerce Customer Support Representative. These experiences made me passionate about customer advocacy and technology in education. I began my design journey by teaching myself to design and code. Later I formalized my learning by pursuing a Digital Media Design Masters at Harvard University's Extension School.</p>
         </div>
         <div className={`col img`}>
-          <img src={Me} />
+          <img src={Me} alt={`Zoraida Cabrera-Mieles`} />
 
         
         </div>
