@@ -15,8 +15,8 @@ const Header = ({active}) => (
     <div>
       <a  href={`mailto:zmcabrera@gmail.com`}>zmcabrera@gmail.com</a>
       <SocialIcons />
-      {active === 'home' &&  <p><Link className={`text-btn-fwd`} to="/">Read Blog</Link></p>}
-      {active === 'blog' &&  <p><Link className={`text-btn-back`} to="/blog">Back Home</Link></p>}
+      {active === 'home' &&  <p><Link className={`text-btn-fwd`} to="/blog">Read Blog</Link></p>}
+      {active === 'blog' &&  <p><Link className={`text-btn-back`} to="/">Back Home</Link></p>}
       {active === 'post' &&  <p><Link className={`text-btn-back`} to="/blog">All Blog Posts</Link></p>}
     </div>
   </header>
