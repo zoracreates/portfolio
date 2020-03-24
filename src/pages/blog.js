@@ -12,7 +12,7 @@ const BlogIndex = () => (
     <main>
       <div className={`hero-band hero-band`}>
         <WrapperLg>
-          <h1>This is where blog will go</h1>
+          <h1>Blog</h1>
         </WrapperLg>
       </div>
     </main>
