@@ -4,19 +4,61 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WrapperLg } from "../components/wrappers"
+import { Link } from "gatsby"
 
 
-const BlogIndex = () => (
-  <Layout active={'blog'}>
-    <SEO title="Blog" />
-    <main>
-      <div className={`hero-band hero-band`}>
-        <WrapperLg>
-          <h1>Blog</h1>
-        </WrapperLg>
-      </div>
-    </main>
-  </Layout>
-)
+const BlogIndex = ({ data }) => {
+  const { edges: posts } = data.allMdx
+
+  return (
+
+    <Layout active={'blog'}>
+      
+      <SEO title="Blog" />
+      <main>
+        <div className={`hero-band hero-band`}>
+          <WrapperLg>
+            <h1>Blog</h1>
+            <ul>
+        {posts.map(({ node: post }) => (
+          
+          <li key={post.id}>
+            <Link to={post.fields.slug}>
+              <h2>{post.frontmatter.title}</h2>
+            </Link>
+            <p>Posted {post.frontmatter.date}</p>
+            <p>{post.excerpt}</p>
+          </li>
+        ))}
+      </ul>
+          </WrapperLg>
+        </div>
+      </main>
+    </Layout>
+  )
+}
+
+export const pageQuery = graphql`
+  query blogIndex {
+    allMdx (
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+      ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            title
+            date (formatString: "MMMM DD, YYYY ")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }`
 
 export default BlogIndex
+

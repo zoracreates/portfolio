@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-
 const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -38,12 +36,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     query {
-      allMdx {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { published: { eq: true } } }
+      ){
         edges {
           node {
             id
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -60,6 +64,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // you'll call `createPage` for each result
   posts.forEach(({ node }, index) => {
+
+    const previous = index === posts.length - 1 ? null : posts[index + 1];
+    const next = index === 0 ? null : posts[index - 1];
+
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
@@ -68,7 +76,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/components/posts-layout.js`),
       // You can use the values in this context in
       // our page layout component
-      context: { id: node.id },
+      context: {
+        id: node.id,
+        previous: previous,
+        next: next,
+      },
     })
   })
 }
