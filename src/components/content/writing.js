@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Writing = ({styleName}) => {
     return (
         <section className={styleName}>
-            <h2>Read Thoughts</h2>
+            <h2>Read Some Thoughts</h2>
             <ul>
               <li>
                 <Link to="/blog">Check out my blog!</Link>

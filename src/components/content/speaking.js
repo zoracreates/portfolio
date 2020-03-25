@@ -7,7 +7,7 @@ const Speaking = ({styleName}) => {
             <h2>Hear Me Speak</h2>
             <ul>
               <li>
-                <i>justify-yourself: space-between</i>, with <a href="https://www.langermank.com/">Katie Langerman</a>, at Boston CSS,
+                <i><a href="https://youtu.be/AtYyOGmOZkc">justify-yourself: space-between</a></i>, with Katie Langerman, at Boston CSS,
               <time dateTime="2019-11-06"> Nov 6, 2019</time>
               </li>
               <li>

@@ -19,14 +19,14 @@ const BlogIndex = ({ data }) => {
         <div className={`hero-band hero-band`}>
           <WrapperLg>
             <h1>Blog</h1>
-            <ul>
+            <ul className={`wrapper-md blog-list`}>
         {posts.map(({ node: post }) => (
           
-          <li key={post.id}>
+          <li className={`raised-card`} key={post.id}>
             <Link to={post.fields.slug}>
               <h2>{post.frontmatter.title}</h2>
             </Link>
-            <p>Posted {post.frontmatter.date}</p>
+            <p className={`u-small`}><span className={`label`}>Posted</span> {post.frontmatter.date}</p>
             <p>{post.excerpt}</p>
           </li>
         ))}

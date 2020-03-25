@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import PostSEO from "./posts-seo"
 import Layout from "./layout"
 import { Link } from "gatsby"
+import { BlogPostWrapper } from "./wrappers"
 
 
 export default function PageTemplate({ data, pageContext }) {
@@ -15,39 +16,42 @@ export default function PageTemplate({ data, pageContext }) {
       <PostSEO title={frontmatter.title} tags={frontmatter.tags} />
 
       <Layout active={`post`}>
-
-        <main className={`wrapper-lg`}>
+        <BlogPostWrapper>
           <h1>{frontmatter.title}</h1>
-          <p>Posted {frontmatter.date}</p>
-          <MDXRenderer>{body}</MDXRenderer>
-        </main>
+          <main>
+            <p className={`u-small`}><span className={`label`}>Posted</span> {frontmatter.date}</p>
+            <MDXRenderer>{body}</MDXRenderer>
+          </main>
+        </BlogPostWrapper>
 
-        <aside className={`wrapper-lg post-nav`}>
-        {previous === false ? null : (
-          <>
-            {pageContext.previous && (
-              <div>
-                <h2>Previous</h2>
-                <Link to={previous.node.fields.slug}>
-                  <p>{previous.node.frontmatter.title}</p>
-                </Link>
-              </div>
+        <nav className={`inset`}>
+          <div className={`wrapper-lg post-nav`}>
+            {previous === false ? null : (
+              <>
+                {pageContext.previous && (
+                  <h2>
+                    <Link to={previous.node.fields.slug}>
+                      <span>Previous</span>
+                      {previous.node.frontmatter.title}
+                    </Link>
+                  </h2>
+                )}
+              </>
             )}
-          </>
-        )}
-        {pageContext.next === false ? null : (
-          <>
-            {pageContext.next && (
-              <div>
-                <h2>Next</h2>
-                <Link to={next.node.fields.slug}>
-                  <p>{next.node.frontmatter.title}</p>
-                </Link>
-              </div>
+            {pageContext.next === false ? null : (
+              <>
+                {pageContext.next && (
+                  <h2 className={'block-right'}>
+                    <Link to={next.node.fields.slug}>
+                      <span>Next</span>
+                      {next.node.frontmatter.title}
+                    </Link>
+                  </h2>
+                )}
+              </>
             )}
-          </>
-        )}
-        </aside>
+          </div>
+        </nav>
       </Layout>
     </>
   )

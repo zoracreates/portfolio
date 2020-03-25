@@ -11,10 +11,18 @@ export const WrapperLg= ({children, styleName}) =>{
 
 export const CenterTextBand = ({children,sectionTitle, styleName}) =>{ 
     return (
-        <section className={`text-block-center band ${styleName}`}>
+        <section className={`text-center block-center wrapper-md band ${styleName}`}>
             <h2>{sectionTitle}</h2>
             {children}
         </section>
+      )
+}
+
+export const BlogPostWrapper = ({children, styleName}) =>{ 
+    return (
+        <article className={`wrapper-sm block-center`}>
+            {children}
+        </article>
       )
 }
 
