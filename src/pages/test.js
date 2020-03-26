@@ -2,13 +2,13 @@ import React from "react"
 
 
 import Layout from "../components/layout"
-
 import { WrapperLg } from "../components/wrappers"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 
 
 const QueryTest = ({ data }) => {
   const { edges: posts } = data.postPages;
+  console.log(posts)
 
   return (
 

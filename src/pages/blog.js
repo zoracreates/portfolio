@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WrapperLg } from "../components/wrappers"
 import { Link } from "gatsby"
-
+import { graphql } from 'gatsby'
 
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
