@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import SocialIcons from "./content/socialIcons"
-import Logo from "../images/z-logo.png"
+import Logo from "../images/z-logo-blue.png"
 import PropTypes from "prop-types"
 
 const Header = ({active}) => (

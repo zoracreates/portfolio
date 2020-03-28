@@ -635,7 +635,7 @@ pre tt:after {
 
 html {
   background-color: #EDEDED;
-  color: #33475b
+  color: #33475b;
 }
 
 .wrapper-lg {
@@ -801,18 +801,18 @@ p.hero-text {
 }
 
 a {
-  color: #09727C;
+  color: #0540F2;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px dotted #09727C;
+  border-bottom: 1px dotted #0540F2;
 }
 
 a:hover {
-  border-bottom: 1px solid #09727C;
+  border-bottom: 1px solid #0540F2;
 }
 
 footer a {
-  color: #09646D;
+  color: #0540F2;
 }
 
 a.btn {
@@ -824,7 +824,7 @@ a.btn {
   margin: 20px 0;
   padding: 20px;
   width: fit-content;
-  background-color: #C50236;
+  background-color: #0540F2;
   transition: 0.09s ease-in;
   box-shadow: -2px -2px 2px #FAFAFA,
                2px 2px 2px #B3B3B3;
@@ -834,7 +834,7 @@ a.btn {
 
 a.btn:hover {
   border: none;
-  background-color: #9C022B;
+  background-color: #032896;
   box-shadow: 1px 1px 2px #FFF,
               -1px -1px 2px #D6D4D4,
               inset 0px 1px 2px #855D05;
@@ -844,7 +844,7 @@ a.text-btn-fwd,
 a.text-btn-back {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: #09727C;
+  color: #0540F2;
   border: none;
 }
 
@@ -1029,7 +1029,7 @@ footer {
 }
 
 .hero-band h1 {
-  color: #03378A;
+  color: #0540F2;
   text-shadow: 1px 1px 1px #FFFFFF,
               -1px -1px 1px #FFFFFF,
               -2px -2px 2px #9B9A9A,
