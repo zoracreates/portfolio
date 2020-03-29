@@ -948,6 +948,7 @@ ul.blog-list {
 
   .post-nav h2 {
     margin-bottom: 0;
+    max-width: 40%;
   }
 
   .block-right {
