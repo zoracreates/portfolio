@@ -10,6 +10,12 @@ import { BlogPostWrapper } from "./wrappers"
 export default function PageTemplate({ data, pageContext }) {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
+  const navExists = () => {
+    if (previous != null || next != null) {
+      return true
+    }
+    return false
+  }
 
   return (
     <>
@@ -22,8 +28,10 @@ export default function PageTemplate({ data, pageContext }) {
             <p className={`u-small`}><span className={`label`}>Posted</span> {frontmatter.date}</p>
             <MDXRenderer>{body}</MDXRenderer>
           </main>
-        </BlogPostWrapper>
+        </BlogPostWrapper> 
 
+        {console.log(navExists())}
+ {navExists() &&
         <nav className={`inset`}>
           <div className={`wrapper-lg post-nav`}>
             {previous === false ? null : (
@@ -51,7 +59,7 @@ export default function PageTemplate({ data, pageContext }) {
               </>
             )}
           </div>
-        </nav>
+        </nav>}
       </Layout>
     </>
   )
