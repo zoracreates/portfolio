@@ -61,7 +61,7 @@ const ClientLogos = () => {
         <div className={`inset`}>
             {images &&
                 <CenterTextBand sectionTitle="Trusted By">
-                    <div className={`cols-2-4`}>
+                    <div className={`cols-1-4`}>
                         {
                             images.map((image, id) => {
                                 return (

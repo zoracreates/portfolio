@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
+import "./styles/main.scss"
 
 const Layout = ({ children, active }) => {
   return (

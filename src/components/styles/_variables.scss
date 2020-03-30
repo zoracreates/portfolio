@@ -1,0 +1,38 @@
+$primary-gray: #EDEDED;
+$primary-black: #33475b;
+$primary-color: #0540F2;
+$primary-color-dark: #032896;
+$white: #FFF;
+$dark-gray: #D6D6D6;
+
+%raised-block {
+    box-shadow: -2px -2px 4px $white,
+    2px 2px 4px #C9C5C5;
+    border: 1px solid #F2F2F2;
+}
+
+%inset-block {
+    box-shadow: inset -2px -2px 4px $white,
+                inset 2px 2px 4px #C9C5C5;
+    background-color: #E7E7E7;
+}
+
+%raised-button {
+    background-color: $primary-color;
+    box-shadow: -2px -2px 2px #FAFAFA,
+    2px 2px 2px #B3B3B3;
+}
+
+%pressed-button {
+    background-color: $primary-color-dark;
+    box-shadow: 1px 1px 2px $white,
+                -1px -1px 2px #D6D4D4,
+                inset 0px 1px 2px #855D05;
+}
+
+%raised-text {
+    text-shadow: 1px 1px 1px $white,
+                -1px -1px 1px $white,
+                -2px -2px 2px #9B9A9A,
+                2px 2px 2px #9B9A9A;
+}
