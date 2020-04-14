@@ -314,6 +314,37 @@ html {
     max-width: 500px;
   }
 
+  /* text */
+  blockquote {
+    font-family: 'Sriracha', cursive;
+    font-size: 1rem;
+  }
+
+  blockquote p {
+    border-left: 5px solid $primary-color;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-size: 1.38316rem;
+  }
+
+  blockquote span {
+    font-family: 'Lato', sans-serif;
+    display: block;
+    padding-left: 25px;
+    font-size: 0.85028rem;
+   
+  }
+
+  blockquote span:before {
+    content:  '\2014 ';
+  }
+
+  blockquote p,
+  blockquote span {
+    line-height: 1.2;
+
+  }
+
     /* Gird classes */
     .cols-1-4 {
       max-width: 35%;
