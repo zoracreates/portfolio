@@ -20,9 +20,8 @@ const IndexPage = () => (
         <WrapperLg>
           <h1>I'm Zoraida, <br /> UX Designer &amp; Researcher</h1>
           <p className={`hero-text`}>
-            I’m currently  working at Harvard University,
-            conducting research, facilitating design workshops, establishing visual guidelines for websites,
-            and theming with CSS and a sprinkle of JavaScript.
+            I conduct usability research for web apps, facilitate design workshops, establish visual guidelines for websites,
+            and theme with CSS and a sprinkle of JavaScript.
           </p>
         </WrapperLg>
       </div>
