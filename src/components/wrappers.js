@@ -20,7 +20,7 @@ export const CenterTextBand = ({children,sectionTitle, styleName}) =>{
 
 export const BlogPostWrapper = ({children, styleName}) =>{ 
     return (
-        <article className={`wrapper-sm block-center`}>
+        <article className={`wrapper-sm block-center ${styleName}`}>
             {children}
         </article>
       )

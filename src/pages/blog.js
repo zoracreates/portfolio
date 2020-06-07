@@ -19,7 +19,10 @@ const BlogIndex = ({ data }) => {
         <div className={`hero-band hero-band`}>
           <WrapperLg>
             <h1>Blog</h1>
-            <ul className={`wrapper-md blog-list`}>
+          </WrapperLg>
+        </div>
+        <WrapperLg>
+        <ul className={`wrapper-md blog-list`}>
         {posts.map(({ node: post }) => (
           
           <li className={`raised-card`} key={post.id}>
@@ -29,10 +32,10 @@ const BlogIndex = ({ data }) => {
             <p className={`u-small`}><span className={`label`}>Posted</span> {post.frontmatter.date}</p>
             <p>{post.excerpt}</p>
           </li>
+          
         ))}
       </ul>
-          </WrapperLg>
-        </div>
+        </WrapperLg>
       </main>
     </Layout>
   )
