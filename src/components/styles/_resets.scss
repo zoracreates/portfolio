@@ -17,14 +17,12 @@ body,
 a, 
 li {
   font-family: 'Lato', sans-serif;
-  
-
 }
 
 h1 {
   font-family: 'Prata', serif;
-
 }
+
 h2, 
 h3,
 h4,
@@ -87,9 +85,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -257,7 +253,7 @@ h1 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: $h1-size;
   line-height: 1.1;
 }
 h2 {
@@ -272,7 +268,7 @@ h2 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: $h2-size;
   line-height: 1.1;
 }
 h3 {
@@ -287,7 +283,7 @@ h3 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: $h3-size;
   line-height: 1.1;
 }
 h4 {
@@ -302,7 +298,7 @@ h4 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: $h4-size;
   line-height: 1.1;
 }
 h5 {
@@ -317,7 +313,7 @@ h5 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: $h5-size;
   line-height: 1.1;
 }
 h6 {
@@ -332,7 +328,7 @@ h6 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: $h6-size;
   line-height: 1.1;
 }
 hgroup {
@@ -431,7 +427,7 @@ table {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1rem;
+  font-size: $h4-size;
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;

@@ -1,5 +1,5 @@
-@import 'resets';
 @import 'variables';
+@import 'resets';
 
 /* general styles */
 html {
@@ -198,10 +198,10 @@ html {
   }
 
   a.text-btn {
-    margin-bottom: 1rem;
+    margin-bottom: $h4-size;
     display: inline-block;
     text-transform: uppercase;
-    font-size: 0.85028rem;
+    font-size: $h5-size;
   }
   
   a.text-btn-fwd::after,
@@ -261,7 +261,7 @@ html {
   }
 
   p.hero-text {
-    font-size: 1.38316rem;
+    font-size: $h3-size;
     line-height: 1.2;
   }  
 
@@ -272,13 +272,13 @@ html {
   }
   
   .post-nav h2 a {
-    font-size: 1rem;
+    font-size: $h4-size;
   }
   
   .label,
   .post-nav h2 span,
   .u-small {
-    font-size: 0.78405rem;
+    font-size: $h6-size;
   }
 
   .post-list .u-small {
@@ -353,14 +353,14 @@ html {
   /* text */
   blockquote {
     font-family: 'Sriracha', cursive;
-    font-size: 1rem;
+    font-size: $h4-size;
   }
 
   blockquote p {
     border-left: 5px solid $primary-color;
     padding-left: 20px;
     margin-bottom: 5px;
-    font-size: 1.38316rem;
+    font-size: $h3-size;
   }
 
   blockquote span {
