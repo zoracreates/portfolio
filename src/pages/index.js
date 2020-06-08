@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WrapperLg } from "../components/wrappers"
 import Writing from "../components/content/writing"
+import Speaking from "../components/content/speaking"
+import { formatDate } from "../helpers/formatData"
 import { Link } from "gatsby"
 import { graphql } from 'gatsby'
 
@@ -29,14 +31,16 @@ const IndexPage = ({ data }) => {
 
           <h3>Recent Blog Posts</h3>
 
-          <ul className={`blog-list`}>
+          <ul className={`post-list`}>
             {posts.map(({ node: post }) => (
 
               <li key={post.id}>
-                <Link to={post.fields.slug}>
-                  <h4>{post.frontmatter.title}</h4>
-                </Link>
-                <p className={`u-small`}><span className={`label`}>Posted</span> {post.frontmatter.date}</p>
+                <h4>
+                  <Link to={post.fields.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                </h4>
+                <p className={`u-small`}><span className={`label`}>Posted:</span> <time dateTime={formatDate(post.frontmatter.date)}>{post.frontmatter.date}</time></p>
                 <p className={`u-med`}>{post.excerpt}</p>
               </li>
 
@@ -46,6 +50,9 @@ const IndexPage = ({ data }) => {
           <Link className={`text-btn`} to={`/blog`}>See All Posts</Link>
 
         </Writing>
+
+        <Speaking styleName="wrapper-lg" />
+
 
       </main>
     </Layout>

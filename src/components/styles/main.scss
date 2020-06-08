@@ -191,7 +191,7 @@ html {
     font-weight: bold;
     color: $primary-color;
   }
-  
+
   a.text-btn-fwd,
   a.text-btn-back {
     border: none;
@@ -281,8 +281,19 @@ html {
     font-size: 0.78405rem;
   }
 
-  .blog-list .u-small {
+  .post-list .u-small {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .post-list li h4,
+  .post-list li h2 {
     margin-bottom: 0px;
+  }
+
+  .post-list li h4 a,
+  .post-list li h2 a {
+    border-bottom: none;
   }
   
   .u-med {
@@ -309,15 +320,15 @@ html {
     padding: 35px 0;
   }
   
-  ul.blog-list {
+  ul.post-list {
     margin: 0;
   }
   
-  .blog-list li {
+  .post-list li {
     list-style: none;
   }
 
-  .blog-list li:not(:first-child) {
+  .post-list li:not(:first-child) {
     margin-top: 35px;
   }
   
