@@ -27,28 +27,29 @@ const IndexPage = ({ data }) => {
           </WrapperLg>
         </div>
 
-        <Writing styleName="wrapper-lg">
+        <Writing styleName={`wrapper-lg`}>
 
-          <h3>Recent Blog Posts</h3>
+         
+            <h3>Recent Blog Posts</h3>
 
-          <ul className={`post-list`}>
-            {posts.map(({ node: post }) => (
+            <ul className={`post-list cols-1-2`}>
+              {posts.map(({ node: post }) => (
 
-              <li key={post.id}>
-                <h4>
-                  <Link to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h4>
-                <p className={`u-small`}><span className={`label`}>Posted:</span> <time dateTime={formatDate(post.frontmatter.date)}>{post.frontmatter.date}</time></p>
-                <p className={`u-med`}>{post.excerpt}</p>
-              </li>
+                <li key={post.id} className={`cols`}>
+                  <h4>
+                    <Link to={post.fields.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </h4>
+                  <p className={`u-small`}><span className={`label`}>Posted:</span> <time dateTime={formatDate(post.frontmatter.date)}>{post.frontmatter.date}</time></p>
+                  <p className={`u-med`}>{post.excerpt}</p>
+                </li>
 
-            ))}
-          </ul>
+              ))}
+            </ul>
 
-          <Link className={`text-btn`} to={`/blog`}>See All Posts</Link>
-
+            <Link className={`text-btn-fwd`} to={`/blog`}>See All Blog Posts</Link>
+      
         </Writing>
 
         <Speaking styleName="wrapper-lg" />

@@ -29,8 +29,6 @@ export default function PageTemplate({ data, pageContext }) {
             <MDXRenderer>{body}</MDXRenderer>
           </main>
         </BlogPostWrapper> 
-
-        {console.log(navExists())}
  {navExists() &&
         <nav className={`inset`}>
           <div className={`wrapper-lg post-nav`}>

@@ -27,6 +27,7 @@ html {
   .wrapper-sm {
     width: 92%;
     max-width: 650px;
+    max-width: 800px;
   }
   
   img.block-center {
@@ -76,9 +77,67 @@ html {
     margin-bottom: 0;
   }
 
+  header ul li.menu-parent  {
+    position: relative;
+  }
+
+  header ul li.menu-parent ul { 
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $dark-gray;
+    padding: 10px;
+    transition-duration: .5s;
+    opacity: 1;
+  }
+
+  header ul li.menu-parent ul li {
+    margin-bottom: 10px;
+  }
+ 
+  header ul li.menu-parent.closed ul {
+    visibility: hidden;
+    opacity: 0;;
+  }
+
+  header ul li.menu-parent > button {
+    font-size: 0px;
+    border: none;
+    position: relative;
+    height: 6px;
+    width: 6px;
+  }
+
+  header ul li.menu-parent button::after {
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 4px;
+    content: '';
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+
+  header ul li.menu-parent.open button::after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
   footer {
     margin-top: 35px;
     padding-top: 35px;
+  }
+
+  .inset + footer {
+    margin-top: 0px;
   }
 
   ul.social img {
@@ -185,23 +244,16 @@ html {
   
 
   a.text-btn-fwd,
-  a.text-btn-back,
-  a.text-btn {
+  a.text-btn-back {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: $primary-color;
-  }
-
-  a.text-btn-fwd,
-  a.text-btn-back {
-    border: none;
-  }
-
-  a.text-btn {
-    margin-bottom: $h4-size;
-    display: inline-block;
-    text-transform: uppercase;
+    margin-top: .45rem;
+    margin-bottom: 1.45rem;
     font-size: $h5-size;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
   }
   
   a.text-btn-fwd::after,
@@ -288,6 +340,7 @@ html {
 
   .post-list li h4,
   .post-list li h2 {
+    margin-top: 0px;
     margin-bottom: 0px;
   }
 
@@ -297,7 +350,7 @@ html {
   }
   
   .u-med {
-    font-size: 0.85028rem;;
+    font-size: $h4-size;
   }
 
   .label,
@@ -326,10 +379,7 @@ html {
   
   .post-list li {
     list-style: none;
-  }
-
-  .post-list li:not(:first-child) {
-    margin-top: 35px;
+    margin-bottom: 15px;
   }
   
   .gatsby-resp-image-link,
@@ -394,7 +444,6 @@ html {
     @media (min-width: 768px) {
       .cols-1-4 {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
         justify-content: space-around;
         max-width: 100%;
@@ -456,8 +505,8 @@ html {
     @supports (display:grid) {
       .cols-1-3,
       .cols-1-2 {
+       align-items: center;
         display: grid;
-        align-items: center;
         grid-gap: 8%;
       }
       

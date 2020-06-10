@@ -14,7 +14,6 @@ const BlogIndex = ({ data }) => {
   return (
 
     <Layout active={'blog'}>
-      
       <SEO title="Blog" />
       <main>
         <div className={`hero-band hero-band`}>
