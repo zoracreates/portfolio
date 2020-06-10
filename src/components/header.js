@@ -45,7 +45,7 @@ class Header extends React.Component {
             <ul>
             <li className={`menu-parent ${toggleClass}`}>
             <Link to="/">Portfolio</Link>  <button onClick={() => this.toggleMenu()}>{portfolioMenuText}</button> 
-              <ul>
+              <ul onClick={() => this.toggleMenu()}>
                 <li><Link to="/#work">Work</Link></li>
                 <li><Link to="/#writing">Writing</Link></li>
                 <li><Link to="/#speaking">Speaking</Link></li>
