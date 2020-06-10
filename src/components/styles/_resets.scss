@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
 
 html {
   -ms-text-size-adjust: 100%;
@@ -13,14 +13,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body,
-a, 
-li {
-  font-family: 'Lato', sans-serif;
+body {
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 h1 {
-  font-family: 'Prata', serif;
+  font-family: 'Martel', serif;
 }
 
 h2, 
@@ -28,8 +26,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
+  font-family: 'Martel', serif;
+  font-weight: 800;
 }
 
 
@@ -207,7 +205,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 115.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -254,7 +252,7 @@ h1 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h1-size;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 h2 {
   margin-left: 0;
