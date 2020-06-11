@@ -57,6 +57,7 @@ html {
     font-size: 0.85028rem;
     text-transform: uppercase;
     position: relative;
+    text-decoration: none;
   }
 
   header li a::after {
@@ -78,6 +79,10 @@ html {
   .band {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  footer a {
+    text-decoration: none;
   }
   
   header ul,
@@ -243,8 +248,7 @@ html {
   a {
     color: $primary-color;
     font-weight: bold;
-    text-decoration: none;
-   transition: .2s;
+    text-decoration: underline;
   }
   
   footer a {
@@ -252,6 +256,7 @@ html {
   }
   
   a.btn {
+    text-decoration: none;
     color: $white;
     text-decoration: none;
     font-weight: bold;
@@ -279,6 +284,7 @@ html {
 
   a.text-btn-fwd,
   a.text-btn-back {
+    text-decoration: none;
     font-family: 'Hind Guntur', sans-serif;
     font-weight: bold;
     color: $primary-color;
@@ -346,6 +352,10 @@ html {
     margin-bottom: 0;
   }
 
+  .post-nav a {
+    text-decoration: none;
+  }
+
   .post-nav h2 {
     margin-top: 0px;
   }
@@ -369,6 +379,10 @@ html {
   .post-list li h2 {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .post-list li h2 a {
+   text-decoration: none;
   }
 
   .u-med {
@@ -415,14 +429,13 @@ html {
   /* text */
   blockquote {
     font-family: 'Martel', serif;
-    font-size: $h4-size;
   }
 
   blockquote p {
-    border-left: 5px solid $primary-color;
+    border-left: 2px solid $primary-color;
+    font-size: $h4-size;
     padding-left: 20px;
     margin-bottom: 5px;
-    font-size: $h3-size;
   }
 
   blockquote span {

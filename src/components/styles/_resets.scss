@@ -27,7 +27,7 @@ h4,
 h5,
 h6 {
   font-family: 'Martel', serif;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 
@@ -249,7 +249,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h1-size;
   line-height: 1.2;
@@ -264,7 +263,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h2-size;
   line-height: 1.2;
@@ -279,7 +277,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h3-size;
   line-height: 1.2;
@@ -294,7 +291,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h4-size;
   line-height: 1.2;
@@ -309,7 +305,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h5-size;
   line-height: 1.2;
@@ -324,7 +319,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: $h6-size;
   line-height: 1.2;
