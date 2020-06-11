@@ -7,7 +7,7 @@ const Speaking = ({styleName}) => {
             <h2>Speaking</h2>
             <ul className={`post-list cols-1-2`}>
               <li className={`col card`}>
-               <h4><a href="https://youtu.be/AtYyOGmOZkc"><i>justify-yourself: space-between</i>, with Katie Langerman</a> [video]</h4>
+               <h4><a target={`_blank`} href="https://youtu.be/AtYyOGmOZkc"><i>justify-yourself: space-between</i>, with Katie Langerman</a> [video]</h4>
                <p className={`u-small`}><span className={`label`}>Date:</span><time dateTime="2019-11-06"> Nov 6, 2019</time> </p>
                <p className={`u-small`}><span className={`label`}>Host:</span> Boston CSS at Thoughtbot</p>
               </li>

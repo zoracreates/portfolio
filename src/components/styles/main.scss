@@ -285,7 +285,7 @@ html {
   a.text-btn-fwd,
   a.text-btn-back {
     text-decoration: none;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: $body-font;
     font-weight: bold;
     color: $primary-color;
     margin-top: .45rem;
@@ -386,7 +386,7 @@ html {
   }
 
   .u-med {
-    font-size: $h4-size;
+    font-size: $p-size;
   }
 
   .label,
@@ -428,7 +428,7 @@ html {
 
   /* text */
   blockquote {
-    font-family: 'Martel', serif;
+    font-family: $header-font;
   }
 
   blockquote p {
@@ -439,7 +439,7 @@ html {
   }
 
   blockquote span {
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: $body-font;
     display: block;
     padding-left: 25px;
     font-size: 0.85028rem;
