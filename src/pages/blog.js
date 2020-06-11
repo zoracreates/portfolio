@@ -25,7 +25,7 @@ const BlogIndex = ({ data }) => {
         <ul className={`wrapper-md post-list`}>
         {posts.map(({ node: post }) => (
           
-          <li className={`raised-card`} key={post.id}>
+          <li className={`card`} key={post.id}>
             <h2><Link to={post.fields.slug}>
               {post.frontmatter.title}
             </Link>

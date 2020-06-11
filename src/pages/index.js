@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
     <Layout active={'home'}>
       <SEO title="Home" />
       <main>
-        <div className={`hero-band hero-band`}>
+        <div className={`hero-band hero-band container-full`}>
           <WrapperLg>
             <h1>I'm Zoraida, <br /> UX Designer &amp; Researcher</h1>
             <p className={`hero-text`}>
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
             <ul className={`post-list cols-1-2`}>
               {posts.map(({ node: post }) => (
 
-                <li key={post.id} className={`cols`}>
+                <li key={post.id} className={`col card`}>
                   <h4>
                     <Link to={post.fields.slug}>
                       {post.frontmatter.title}
