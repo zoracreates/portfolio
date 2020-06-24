@@ -8,7 +8,7 @@ const Writing = ({ styleName, children}) => {
       <h2 className={`col`}>Writing</h2>
       <div className={`col`}>
         <h3>Selected Publications</h3>
-        <ul className={`post-list cols-1-2`}>
+        <ul className={`post-list cols-50-50`}>
           <li className={`col card`}>
             <h4> <a target={`_blank`} href="https://uxdesign.cc/the-rainbow-sheet-a-visual-method-for-research-analysis-a7e7d2011058">
               "The rainbow sheet: a visual method for research analysis," <i>UX Collective</i></a></h4>

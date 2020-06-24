@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
           </WrapperLg>
         </div>
 
-        <Writing >
+        <Writing styleName={`wrapper-lg`}>
 
          
             <h3>Recent Blog Posts</h3>
