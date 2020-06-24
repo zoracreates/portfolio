@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 
 const Speaking = ({styleName}) => {
     return (
-        <section id={`speaking`} className={`${styleName}`}>
-            <h2>Speaking</h2>
-            <ul className={`post-list cols-1-2`}>
+        <section id={`speaking`} className={`${styleName} cols-20-80`}>
+            <h2 className={`col`}>Speaking</h2>
+            <ul className={`post-list col cols-50-50`}>
               <li className={`col card`}>
                <h4><a target={`_blank`} href="https://youtu.be/AtYyOGmOZkc"><i>justify-yourself: space-between</i>, with Katie Langerman</a> [video]</h4>
                <p className={`u-small`}><span className={`label`}>Date:</span><time dateTime="2019-11-06"> Nov 6, 2019</time> </p>

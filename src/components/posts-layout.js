@@ -30,7 +30,7 @@ export default function PageTemplate({ data, pageContext }) {
           </main>
         </BlogPostWrapper> 
  {navExists() &&
-        <nav className={`inset`}>
+        <nav>
           <div className={`wrapper-lg post-nav`}>
             {previous === false ? null : (
               <>

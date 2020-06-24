@@ -14,11 +14,11 @@ import "./styles/main.scss"
 
 const Layout = ({ children, active }) => {
   return (
-    <>
+    <div id={active}>
       <Header active={active}  />
         {children}
       <Footer />
-    </>
+    </div>
   )
 }
 
