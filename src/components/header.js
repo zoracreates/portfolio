@@ -6,32 +6,14 @@ import PropTypes from "prop-types"
 
 class Header extends React.Component {
   state = { 
-    menuParentOpen: false,
-    activeLink: this.props.active
+    activeHome: this.props.active === 'home' ? 'active' : '',
+    activeBlog: this.props.active === 'blog' ? 'active' : '',
+    activeContact: this.props.active === 'contact' ? 'active' : '',
   }
 
-  toggleMenu = () => {
-    this.setState({
-      menuParentOpen: !this.state.menuParentOpen
-    })
-  }
 
   render() {
-    let toggleClass;
-    let portfolioMenuText;
-    /*use this to create active status probably with a switch statement*/
-    let activeLink = this.state.activeLink;
-    console.log(activeLink);
-    
-
-    if (this.state.menuParentOpen === false) {
-      toggleClass = 'closed'
-      portfolioMenuText = 'Open Portfolio Menu';
-    }
-    else {
-      toggleClass = 'open'
-      portfolioMenuText = 'Close Portfolio Menu';
-    }
+    console.log(this.state.activeHome);
 
     return (
       <header className={`wrapper-lg`}>
@@ -43,15 +25,9 @@ class Header extends React.Component {
         </div>
         <div>
             <ul>
-            <li className={`menu-parent ${toggleClass}`}>
-            <Link to="/">Portfolio</Link>  <button onClick={() => this.toggleMenu()}>{portfolioMenuText}</button> 
-              <ul onClick={() => this.toggleMenu()}>
-                <li><Link to="/#work">Work</Link></li>
-                <li><Link to="/#writing">Writing</Link></li>
-                <li><Link to="/#speaking">Speaking</Link></li>
-              </ul>
-            </li>
-            <li><Link to="/blog">Blog</Link></li>
+            <li className={`${this.state.activeHome}`}><Link to="/">Portfolio</Link></li>
+            <li className={`${this.state.activeBlog}`}><Link to="/blog">Blog</Link></li>
+            <li className={`${this.state.activeContact}`}><Link to="/blog">Contact</Link></li>
           </ul>
         </div>
       </header>

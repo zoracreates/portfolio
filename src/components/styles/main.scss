@@ -110,60 +110,6 @@ html {
     margin-bottom: 0;
   }
 
-  header ul li.menu-parent  {
-    position: relative;
-  }
-
-  header ul li.menu-parent ul { 
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: $light-gray;
-    padding: 10px;
-    transition-duration: .5s;
-    opacity: 1;
-  }
-
-  header ul li.menu-parent ul li {
-    margin-bottom: 10px;
-  }
- 
-  header ul li.menu-parent.closed ul {
-    visibility: hidden;
-    opacity: 0;;
-  }
-
-  header ul li.menu-parent > button {
-    font-size: 0px;
-    border: none;
-    position: relative;
-    height: 6px;
-    width: 6px;
-  }
-
-  header ul li.menu-parent button::after {
-    position: absolute;
-    top: 2px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: 4px;
-    content: '';
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transition-duration: .5s;
-  }
-
-  header ul li.menu-parent.open button::after {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-
   footer {
     margin-top: 35px;
     padding-top: 35px;
