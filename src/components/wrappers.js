@@ -3,7 +3,7 @@ import React from "react"
 
 export const WrapperLg= ({children, styleName}) =>{ 
     return (
-          <div className={`wrapper-lg ${styleName}`}>
+          <div className={`wrapper-lg ${styleName ? styleName : ''}`}>
             {children}
         </div>
       )
@@ -11,7 +11,7 @@ export const WrapperLg= ({children, styleName}) =>{
 
 export const CenterTextBand = ({children,sectionTitle, styleName}) =>{ 
     return (
-        <section className={`text-center block-center wrapper-md band ${styleName}`}>
+        <section className={`text-center block-center wrapper-md band ${styleName ? styleName : ''}`}>
             <h2>{sectionTitle}</h2>
             {children}
         </section>
@@ -20,7 +20,7 @@ export const CenterTextBand = ({children,sectionTitle, styleName}) =>{
 
 export const BlogPostWrapper = ({children, styleName}) =>{ 
     return (
-        <article className={`wrapper-sm block-center ${styleName}`}>
+        <article className={`wrapper-sm block-center ${styleName ? styleName : ''}`}>
             {children}
         </article>
       )
