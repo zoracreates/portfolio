@@ -18,16 +18,20 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <main>
         <div className={`hero-band background-img-band`}>
-        <div className={`wrapper-md block-center`}>
+        <WrapperLg>
             <h1>I'm Zoraida</h1>
             <h2>Product Designer and Design Researcher</h2>
-            <p className={`hero-text`}>
+            <p className={`hero-text wrapper-md`}>
             I work at Harvard University, conducting usability research for places like NASA, 
             as well as designig and theming department websites. 
             I’m passionate about ethical and inclusive design practices. 
-            And I’m curious about the connection of  written or spoken words and interaction design.
+            And I’m curious about the intersection of interaction design with voice and writing.
           </p>
-          </div>
+          <ul>
+            <li><a className={`text-btn`}>Read my thoghts</a></li>
+            <li><a className={`text-btn`}>Hear me speak</a></li>
+          </ul>
+          </WrapperLg>
         </div>
 
         <Writing styleName={`wrapper-lg`}>
@@ -51,7 +55,7 @@ const IndexPage = ({ data }) => {
               ))}
             </ul>
 
-            <Link className={`text-btn-fwd`} to={`/blog`}>See All Blog Posts</Link>
+            <Link className={`text-btn`} to={`/blog`}>See All Blog Posts</Link>
       
         </Writing>
 

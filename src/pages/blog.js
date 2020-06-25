@@ -17,11 +17,9 @@ const BlogIndex = ({ data }) => {
       <SEO title="Blog" />
       <main>
         <div className={`hero-band`}>
-          {/* <WrapperLg> */}
-          <div className={`wrapper-md block-center`}>
+          <WrapperLg>
             <h1>Blog</h1>
-            </div>
-          {/* </WrapperLg> */}
+            </WrapperLg>
         </div>
         <WrapperLg>
         <ul className={`wrapper-md block-center post-list`}>

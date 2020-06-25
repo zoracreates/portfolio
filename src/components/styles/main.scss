@@ -61,6 +61,11 @@ html {
     text-decoration: none;
   }
 
+  a.text-btn {
+    position: relative;
+  }
+
+  a.text-btn::after,
   header li a::after {
     position: absolute;
     top: 100%;
@@ -68,13 +73,20 @@ html {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
-    background: $primary-color;
+    height: 5px;
+    background: $secondary-color;
+    border-radius: 5px;
     transition-duration: .5s;
   }
 
-  header li a:hover::after {
+  a.text-btn::after,
+  header li a:hover::after,
+  header li.active a::after {
     width: 100%;
+  }
+
+  a.text-btn:hover::after {
+    top: 20px;
   }
 
   .band {
@@ -86,6 +98,7 @@ html {
     text-decoration: none;
   }
   
+  .hero-band ul,
   header ul,
   footer ul {
     display: flex;
@@ -93,7 +106,8 @@ html {
     padding-left: 0;
     margin-left: 0;
   }
-  
+
+
   header ul,
   footer ul,
   footer p {
@@ -106,6 +120,7 @@ html {
     padding-bottom: 10px;
   }
   
+  .hero-band ul li,
   header ul li,
   footer ul li {
     margin-bottom: 0;
@@ -124,11 +139,24 @@ html {
     height: 1.25rem;
   }
   
+  .hero-band ul li,
   header ul li,
   footer ul li  {
     list-style: none;
-    padding-right: 20px;
     padding-left: 0;
+  }
+
+  header ul li,
+  footer ul li {
+    padding-right: 20px;
+  }
+
+  .hero-band ul li:not(:last-child) {
+    padding-right: 40px;
+  }
+  
+  .hero-band ul li a {
+    font-size: $p-size;
   }
 
   /* UTILITIES */
@@ -162,6 +190,7 @@ html {
   .card {
     position: relative;
     padding: 10px;
+    border-radius: 5px;
     transition-duration: .5s;
   }
 
@@ -200,7 +229,7 @@ html {
     padding: 10px 25px 5px 25px;
     width: fit-content;
     background-color: $primary-color;
-    transition: 0.09s ease-in;
+    transition: 0.4s ease-in;
     border-radius: 7px;
     border: none;
   }
@@ -210,7 +239,7 @@ html {
     background-color: darken($primary-color, 10%);
   }
   
-
+  a.text-btn,
   a.text-btn-fwd,
   a.text-btn-back {
     text-decoration: none;
@@ -254,11 +283,14 @@ html {
 
   .hero-band {
     background: $light-gray;
-    background-image: url(../../images/banner2.jpg);
     padding: 70px 0 35px 0;
     margin-top: -250px;
     padding-top: 225px;
-    text-align: center;
+  }
+
+  #home .hero-band {
+    background-image: linear-gradient(rgba(234,240,246,.5), rgba(234,240,246, 1) ), url(../../images/banner2.jpg);
+    background-repeat: no-repeat;
     padding-bottom: 150px;
     margin-bottom: 50px;
   }
@@ -396,7 +428,6 @@ html {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 100%;
       }
       
 
