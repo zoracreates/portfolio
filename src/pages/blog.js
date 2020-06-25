@@ -16,13 +16,15 @@ const BlogIndex = ({ data }) => {
     <Layout active={'blog'}>
       <SEO title="Blog" />
       <main>
-        <div className={`hero-band hero-band`}>
-          <WrapperLg>
+        <div className={`hero-band`}>
+          {/* <WrapperLg> */}
+          <div className={`wrapper-md block-center`}>
             <h1>Blog</h1>
-          </WrapperLg>
+            </div>
+          {/* </WrapperLg> */}
         </div>
         <WrapperLg>
-        <ul className={`wrapper-md post-list`}>
+        <ul className={`wrapper-md block-center post-list`}>
         {posts.map(({ node: post }) => (
           
           <li className={`card`} key={post.id}>

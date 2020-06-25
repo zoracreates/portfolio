@@ -40,6 +40,7 @@ html {
     display: block;
   }
   
+  ul.post-list.block-center,
   .block-center {
     margin: auto;
   }
@@ -196,22 +197,17 @@ html {
     text-align: center;
     display: block;
     margin: 20px 0;
-    padding: 20px;
+    padding: 10px 25px 8px 25px;
     width: fit-content;
     background-color: $primary-color;
     transition: 0.09s ease-in;
-    box-shadow: -2px -2px 2px #FAFAFA,
-                 2px 2px 2px #B3B3B3;
-    border-radius: 4px;
+    border-radius: 7px;
     border: none;
   }
   
   a.btn:hover {
     border: none;
-    background-color: #032896;
-    box-shadow: 1px 1px 2px $light-gray,
-                -1px -1px 2px #D6D4D4,
-                inset 0px 1px 2px #855D05;
+    background-color: darken($primary-color, 10%);
   }
   
 
@@ -262,6 +258,9 @@ html {
     padding: 70px 0 35px 0;
     margin-top: -250px;
     padding-top: 225px;
+    text-align: center;
+    padding-bottom: 150px;
+    margin-bottom: 50px;
   }
   
   .logo  {
@@ -270,13 +269,21 @@ html {
   }
   
   .hero-band h1 {
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+
+  .hero-band h2 {
     color: $primary-color;
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   p.hero-text {
-    font-size: $h3-size;
     line-height: 1.2;
-  }  
+  } 
+ 
 
   /* blog and post styles */
   
@@ -344,9 +351,14 @@ html {
     list-style: none;
     margin-bottom: 15px;
   }
+
+  
   
   /* home */
-
+#home iframe {
+  width: 100%;
+  margin-bottom: 0px;
+}
   /* text */
   blockquote {
     font-family: $header-font;
@@ -412,8 +424,16 @@ html {
 
   @media (min-width: 769px) {
     .hero-band h1 {
-        font-size: 100px;
+        font-size: $h1-size * 2.2;
     }
+
+    .hero-band h2 {
+      font-size: $h2-size * 1.2
+    }
+
+    p.hero-text {
+      font-size: $h3-size;
+    } 
 
     .cols-50-50 {
       display: flex;

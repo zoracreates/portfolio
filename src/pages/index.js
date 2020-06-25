@@ -18,19 +18,22 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <main>
         <div className={`hero-band background-img-band`}>
-          <WrapperLg>
-            <h1>I'm Zoraida, <br /> UX Designer &amp; Researcher</h1>
+        <div className={`wrapper-md block-center`}>
+            <h1>I'm Zoraida</h1>
+            <h2>Product Designer and Design Researcher</h2>
             <p className={`hero-text`}>
-              I conduct usability research for web apps, facilitate design workshops, establish visual guidelines for websites,
-              and theme with CSS and a sprinkle of JavaScript.
+            I work at Harvard University, conducting usability research for places like NASA, 
+            as well as designig and theming department websites. 
+            I’m passionate about ethical and inclusive design practices. 
+            And I’m curious about the connection of  written or spoken words and interaction design.
           </p>
-          </WrapperLg>
+          </div>
         </div>
 
         <Writing styleName={`wrapper-lg`}>
 
          
-            <h3>Recent Blog Posts</h3>
+            <h3>From My Blog</h3>
 
             <ul className={`post-list cols-50-50`}>
               {posts.map(({ node: post }) => (
