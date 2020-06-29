@@ -19,8 +19,8 @@ const IndexPage = ({ data }) => {
       <main>
         <div className={`hero-band background-img-band`}>
         <WrapperLg>
-            <h1>I'm Zoraida</h1>
-            <h2>Product Designer and Design Researcher</h2>
+            <h1>Hola, I'm Zoraida</h1>
+            <h2>UX Designer/Researcher</h2>
             <p className={`hero-text wrapper-md`}>
             I work at Harvard University, conducting usability research for places like NASA, 
             as well as designig and theming department websites. 
@@ -28,8 +28,8 @@ const IndexPage = ({ data }) => {
             And I’m curious about the intersection of interaction design with voice and writing.
           </p>
           <ul>
-            <li><a className={`text-btn`}>Read my thoghts</a></li>
-            <li><a className={`text-btn`}>Hear me speak</a></li>
+            <li><a className={`text-btn`}>Read some thoughts</a></li>
+            <li><a className={`text-btn`}>Listen to talks</a></li>
           </ul>
           </WrapperLg>
         </div>

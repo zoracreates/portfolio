@@ -12,7 +12,7 @@ const Speaking = ({ styleName }) => {
 
         <div className={`col`}>
           <h3>Videos</h3>
-          <div className={`card no-hover-effect`}>
+          <div className={`card no-hover-effect video-container`}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/AtYyOGmOZkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4>justify-yourself: space-between, with Katie Langerman</h4>
           </div>
