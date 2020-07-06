@@ -3,13 +3,32 @@
 
 /* general styles */
 html {
-    background-color: $light-gray;
-    color: $black;
+    background-color: $background-color;
+    color: $text-color;
   }
 
   p {
     line-height: 1.5;
   }
+/*font family and weights */
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a, 
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    @include black-font;
+}
+
+body {
+    @include regular-font;
+}
 
 /* General layout */
 
@@ -23,7 +42,7 @@ html {
     width: 92%;
     max-width: 1250px;
     margin: 0 auto 35px auto;
-  }
+}
   
   .wrapper-md {
     width: 92%;
@@ -52,6 +71,13 @@ html {
   header {
     padding: 35px 0px;
     display: flex;
+    background-color: $primary-color;
+  }
+
+  header > div {
+    border-bottom: 1px solid $background-color;
+    width: 100%;
+    padding-bottom: 10px;
   }
   
   header a {
@@ -59,39 +85,16 @@ html {
     text-transform: uppercase;
     position: relative;
     text-decoration: none;
-  }
-
-  a.text-btn {
-    position: relative;
-  }
-
-  a.text-btn::after,
-  header li a::after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    content: '';
-    display: block;
-    width: 0;
-    height: 5px;
-    background: $secondary-color;
-    border-radius: 5px;
-    transition-duration: .5s;
-  }
-
-  a.text-btn::after,
-  header li a:hover::after,
-  header li.active a::after {
-    width: 100%;
-  }
-
-  a.text-btn:hover::after {
-    top: 20px;
+    @include black-font;
   }
 
   .band {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  footer .wrapper-lg {
+    border-top: $divider-color 1px solid;
   }
 
   footer a {
@@ -174,6 +177,27 @@ html {
       width: 1px !important;
       white-space: nowrap !important;    
   }
+
+  .u-header {
+    text-transform: uppercase;
+    font-size: $h5-size;
+    padding-bottom: 10px;
+    margin-bottom: .5rem;
+      @include bold-font;
+  }
+
+  .u-med {
+    font-size: $p-size;
+ }
+
+ .label {
+  @include bold-font;
+ }
+
+ .label,
+ .u-small {
+   font-size: $h6-size;
+ }
   
 
 /* cards and blocks appearence */
@@ -192,14 +216,17 @@ html {
     padding: 10px;
     border-radius: 7px;
     transition-duration: .5s;
+    border: 1px solid transparent;
   }
 
   .card:hover {
-    background-color: $white;
+    background-color: #FFF;
+    border-color: #d4d4d4;
   }
 
   .card.no-hover-effect:hover {
     background-color: transparent;
+    border-color: transparent;
   }
   
   .col.raised-card {
@@ -218,91 +245,116 @@ html {
     color: $primary-color;
   }
   
+  a.text-btn,
+  a.btn  {
+    @include black-font;
+}
   a.btn {
     text-decoration: none;
-    color: $light-gray;
+    color: $btn-text;
     text-decoration: none;
-    font-weight: bold;
     text-align: center;
     display: block;
-    margin: 20px 0;
-    padding: 10px 25px 5px 25px;
+    padding: 7px 25px 10px 25px;
     width: fit-content;
-    background-color: $primary-color;
+    background-color: $btn-color;
     transition: 0.4s ease-in;
     border-radius: 7px;
     border: none;
+    text-transform: lowercase;
   }
+
+header a.btn{
+  margin-top: -5px;
+  border: 2px solid $background-color;
+  padding: 2px 10px 5px 10px;  
+  border-radius: 7px;
+  transition: 0.4s ease-in;
+}
+
+header a.btn:hover  {
+  background-color: $background-color;
+  color: $primary-color;
+}
+
+header a.btn::after {
+  display: none;
+}
+
   
   a.btn:hover {
-    border: none;
-    background-color: darken($primary-color, 10%);
+    border-color: transparent;
+    background-color: darken($btn-color, 10%);
   }
   
-  a.text-btn,
-  a.text-btn-fwd,
-  a.text-btn-back {
+  a.text-btn {
+    position: relative;
     text-decoration: none;
-    font-family: $body-font;
-    font-weight: bold;
     color: $primary-color;
-    margin-top: .45rem;
-    margin-bottom: 1.45rem;
+    margin-bottom: 35px;
     font-size: $h5-size;
     border: none;
     text-transform: uppercase;
     display: inline-block;
   }
-  
-  a.text-btn-fwd::after,
-  a.text-btn-back::before {
+
+  a.text-btn::after,
+  header li a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: $text-color;
+    border-radius: 5px;
     transition-duration: .5s;
   }
-  
-  a.text-btn-back::before {
-    content: '\2190';
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  
-  a.text-btn-fwd::after {
-    content: '\2192';
-    padding-left: 5px;
-  }
-  
-  a.text-btn-fwd:hover::after   {
-    padding-left: 10px;
-  }
-  
-  a.text-btn-back:hover::before {
-    padding-right: 9px;
-    padding-left: 1px;
+
+  .hero-band a.text-btn::after,
+  header li a::after {
+    background-color: $secondary-color;
   }
 
+  a.text-btn::after,
+  header li a:hover::after,
+  header li.active a::after {
+    width: 100%;
+  }
+  
+  a.text-btn:hover::after {
+    animation: swipeBorder 1s infinite alternate;
+  }
+  
   /* hero and logo*/
 
   .hero-band {
-    background: $light-gray;
+    background: $primary-color;
     padding: 70px 0 35px 0;
     margin-top: -250px;
     padding-top: 225px;
+    color: $background-color;
+    margin-bottom: 70px;
   }
 
-  #home .hero-band {
-    background-image: linear-gradient(rgba(234,240,246,.5), rgba(234,240,246, 1) ), url(../../images/banner2.jpg);
-    background-repeat: no-repeat;
-    padding-bottom: 150px;
-    margin-bottom: 50px;
+  .hero-band a,
+   header a {
+    color: $background-color;
   }
   
   .logo  {
-    width: 4rem;
-    padding-right: 20px;
+    font-size: $h3-size;
+    text-transform: none;
+    font-family: alana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .hero-band h1 {
     margin-bottom: 10px;
     line-height: 1;
+    font-size: $h2-size ;
   }
 
 
@@ -318,7 +370,16 @@ html {
  
 
   /* blog and post styles */
-  
+
+  #post header {
+    margin-bottom: 0px;
+  }
+
+  #post > div {
+    padding: 35px 0px;
+
+  }
+
   .post-nav h2:last-child {
     margin-bottom: 0;
   }
@@ -334,10 +395,12 @@ html {
   .post-nav h2 a {
     font-size: $h4-size;
   }
+
+  .post-nav h2 span {
+    @include bold-font;
+  }
   
-  .label,
-  .post-nav h2 span,
-  .u-small {
+  .post-nav h2 span {
     font-size: $h6-size;
   }
 
@@ -347,7 +410,8 @@ html {
   }
 
   .post-list li h4,
-  .post-list li h2 {
+  .post-list li h2,
+  .cta h4 {
     margin-top: 0px;
     margin-bottom: 0px;
   }
@@ -356,14 +420,9 @@ html {
    text-decoration: none;
   }
 
-  .u-med {
-    font-size: $p-size;
-  }
-
   .label,
   .post-nav h2 span {
-    color: $black;
-    font-weight: bold;
+    color: $text-color;
   }
   
   .post-nav h2 span {
@@ -384,29 +443,35 @@ html {
     margin-bottom: 15px;
   }
 
-  
-  
   /* home */
   .video-container {
     position: relative; 
     padding-bottom: 56.25%; 
     padding-top: 30px; height: 0; 
-    overflow: hidden; }
+    overflow: hidden; 
+    border-radius: 7px;}
 
-.video-container iframe, 
-.video-container object, 
-.video-container embed { position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-}
-
-  /* text */
-  blockquote {
-    font-family: $header-font;
+  .video-container iframe, 
+  .video-container object, 
+  .video-container embed { position: absolute; 
+     top: 0; 
+     left: 0; 
+    width: 100%; 
+    height: 100%; 
   }
 
+  #home .u-header,
+  #home .cta {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  #home .u-header ~ a.text-btn {
+   margin-left: 7px;
+   transform: translateY(-20px);
+ }
+
+  /* blockquote */
   blockquote p {
     border-left: 2px solid $primary-color;
     font-size: $h4-size;
@@ -415,11 +480,9 @@ html {
   }
 
   blockquote span {
-    font-family: $body-font;
     display: block;
     padding-left: 25px;
-    font-size: 0.85028rem;
-   
+    font-size: $h5-size;
   }
 
   blockquote span:before {
@@ -433,7 +496,12 @@ html {
   }
 
     /* Gird classes */
+
+    .cols-50-50 > .col {
+      margin-bottom: 35px;
+    }
   
+
     @media (min-width: 768px) {
       .cols-20-80 {
         display: flex;
@@ -466,15 +534,15 @@ html {
 
   @media (min-width: 769px) {
     .hero-band h1 {
-        font-size: $h1-size * 2.2;
+        font-size: $h1-size * 1.5
     }
 
-    .hero-band h2 {
-      font-size: $h2-size * 1.2
+    .hero-band h1 span {
+      display: block;
     }
 
     p.hero-text {
-      font-size: $h3-size;
+      font-size: $p-size * 1.5
     } 
 
     .cols-50-50 {
@@ -487,6 +555,7 @@ html {
   
     .cols-50-50 > .col {
       flex-basis: 48.5%;
+      margin-bottom: 35px;
     }
   
 

@@ -5,10 +5,10 @@ const Writing = ({ styleName, children}) => {
   return (
     <section id={`writing`} className={`${styleName ? styleName : ''} cols-20-80`}>
 
-      <h2 className={`col`}>Writing</h2>
+      <h2 className={`col`}>Read Some Thoughts</h2>
       <div className={`col`}>
       {children}
-        <h3>From Other Blogs and Journals</h3>
+        <h3 className={`u-header`}>Written Elsewhere</h3>
         <ul className={`post-list cols-50-50`}>
           <li className={`col card`}>
             <h4> <a target={`_blank`} href="https://uxdesign.cc/the-rainbow-sheet-a-visual-method-for-research-analysis-a7e7d2011058">

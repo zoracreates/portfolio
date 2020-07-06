@@ -18,48 +18,63 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <main>
         <div className={`hero-band background-img-band`}>
-        <WrapperLg>
-            <h1>Hola, I'm Zoraida</h1>
-            <h2>UX Designer/Researcher</h2>
+          <WrapperLg>
+            <h1>I'm Zoraida,<span>UX Designer/Researcher </span></h1>
             <p className={`hero-text wrapper-md`}>
-            I work at Harvard University, conducting usability research for places like NASA, 
-            as well as designig and theming department websites. 
-            I’m passionate about ethical and inclusive design practices. 
-            And I’m curious about the intersection of interaction design with voice and writing.
+              With a background in digital media design, web programming, and design research,
+              I create and improve digital products and experiences. I work at Harvard University, and
+              I also love working with small businesses and creatives.
+              On a more personal note, I’m learning to become a better advocate for ethical and inclusive design.
           </p>
-          <ul>
-            <li><a className={`text-btn`}>Read some thoughts</a></li>
-            <li><a className={`text-btn`}>Listen to talks</a></li>
-          </ul>
           </WrapperLg>
         </div>
 
         <Writing styleName={`wrapper-lg`}>
 
-         
-            <h3>From My Blog</h3>
 
-            <ul className={`post-list cols-50-50`}>
-              {posts.map(({ node: post }) => (
+          <h3 className={`u-header`}>Recent Blog Posts</h3>
 
-                <li key={post.id} className={`col card`}>
-                  <h4>
-                    <Link to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                  </h4>
-                  <p className={`u-small`}><span className={`label`}>Posted:</span> <time dateTime={formatDate(post.frontmatter.date)}>{post.frontmatter.date}</time></p>
-                  <p className={`u-med`}>{post.excerpt}</p>
-                </li>
+          <ul className={`post-list cols-50-50`}>
+            {posts.map(({ node: post }) => (
 
-              ))}
-            </ul>
+              <li key={post.id} className={`col card`}>
+                <h4>
+                  <Link to={post.fields.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                </h4>
+                <p className={`u-small`}><span className={`label`}>Posted:</span> <time dateTime={formatDate(post.frontmatter.date)}>{post.frontmatter.date}</time></p>
+                <p className={`u-med`}>{post.excerpt}</p>
+              </li>
 
-            <Link className={`text-btn`} to={`/blog`}>See All Blog Posts</Link>
-      
+            ))}
+          </ul>
+
+          <Link className={`text-btn`} to={`/blog`}>See All Blog Posts</Link>
+
         </Writing>
 
-        <Speaking styleName="wrapper-lg" />
+        <Speaking styleName={`wrapper-lg`} />
+
+        <section className={`cols-20-80 wrapper-lg`}>
+
+          <h2 className={`col`}>Get In Touch</h2>
+
+
+
+
+          <div className={`col no-hover-effect cta`}>
+            <h4>Want to work together?</h4>
+            <p>If you're looking for a speaker, writer, or
+              are new to the field and would like to chat, send me a note! </p>
+
+            <a className={`btn`} href="mailto:zmcabrera@gmail.com">Email Me</a>
+
+          </div>
+
+
+
+        </section>
 
 
       </main>

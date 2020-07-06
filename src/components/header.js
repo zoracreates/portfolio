@@ -8,7 +8,6 @@ class Header extends React.Component {
   state = { 
     activeHome: this.props.active === 'home' ? 'active' : '',
     activeBlog: this.props.active === 'blog' ? 'active' : '',
-    activeContact: this.props.active === 'contact' ? 'active' : '',
   }
 
 
@@ -16,20 +15,17 @@ class Header extends React.Component {
     console.log(this.state.activeHome);
 
     return (
-      <header className={`wrapper-lg`}>
-        <div className={`logo`}>
-          <Link to="/">
-            <img src={Logo} alt="logo" />
-            <span className={`sr-only`}>Home</span>
-          </Link>
-        </div>
-        <div>
+      <header>
+        <div className={`wrapper-lg`}>
+        <Link className={`logo`} to="/">Zoraida</Link>
             <ul>
-            <li className={`${this.state.activeHome}`}><Link to="/">Portfolio</Link></li>
+            <li className={`${this.state.activeHome}`}><Link to="/">Home</Link></li>
             <li className={`${this.state.activeBlog}`}><Link to="/blog">Blog</Link></li>
-            <li className={`${this.state.activeContact}`}><Link to="/blog">Contact</Link></li>
+            <li><a className={`btn`} href="mailto:zmcabrera@gmail.com">zmcabrera@gmail.com</a></li>
           </ul>
+          
         </div>
+        
       </header>
 
     )
