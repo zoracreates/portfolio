@@ -3,6 +3,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { formatDate } from "../helpers/formatData"
 import { WrapperLg } from "../components/wrappers"
 import { Link } from "gatsby"
 import { graphql } from 'gatsby'
@@ -13,26 +14,29 @@ const BlogIndex = ({ data }) => {
   return (
 
     <Layout active={'blog'}>
-      
       <SEO title="Blog" />
       <main>
-        <div className={`hero-band hero-band`}>
+        <div className={`hero-band`}>
           <WrapperLg>
             <h1>Blog</h1>
-            <ul className={`wrapper-md blog-list`}>
+            </WrapperLg>
+        </div>
+        <WrapperLg>
+        <ul className={`wrapper-md block-center post-list`}>
         {posts.map(({ node: post }) => (
           
-          <li className={`raised-card`} key={post.id}>
-            <Link to={post.fields.slug}>
-              <h2>{post.frontmatter.title}</h2>
+          <li className={`card`} key={post.id}>
+            <h2><Link to={post.fields.slug}>
+              {post.frontmatter.title}
             </Link>
-            <p className={`u-small`}><span className={`label`}>Posted</span> {post.frontmatter.date}</p>
+            </h2>
+            <p className={`u-small`}><span className={`label`}>Posted:</span><time dateTime={formatDate(post.frontmatter.date)}> {post.frontmatter.date}</time></p>
             <p>{post.excerpt}</p>
           </li>
+          
         ))}
       </ul>
-          </WrapperLg>
-        </div>
+        </WrapperLg>
       </main>
     </Layout>
   )

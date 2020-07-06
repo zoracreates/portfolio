@@ -1,38 +1,71 @@
-$primary-gray: #EDEDED;
-$primary-black: #33475b;
-$primary-color: #0540F2;
-$primary-color-dark: #032896;
-$white: #FFF;
-$dark-gray: #D6D6D6;
-
-%raised-block {
-    box-shadow: -2px -2px 4px $white,
-    2px 2px 4px #C9C5C5;
-    border: 1px solid #F2F2F2;
+// Skolar Sans Latin Black
+@mixin black-font {
+    font-family: skolar-sans-latin, sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
-%inset-block {
-    box-shadow: inset -2px -2px 4px $white,
-                inset 2px 2px 4px #C9C5C5;
-    background-color: #E7E7E7;
+// Skolar Sans Latin Regular
+@mixin regular-font {
+    font-family: skolar-sans-latin, sans-serif;
+    font-weight: 400;   
+    font-style: normal;
 }
 
-%raised-button {
-    background-color: $primary-color;
-    box-shadow: -2px -2px 2px #FAFAFA,
-    2px 2px 2px #B3B3B3;
+// Skolar Sans Latin Bold
+@mixin bold-font {
+    font-family: skolar-sans-latin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-%pressed-button {
-    background-color: $primary-color-dark;
-    box-shadow: 1px 1px 2px $white,
-                -1px -1px 2px #D6D4D4,
-                inset 0px 1px 2px #855D05;
+// Skolar Sans Latin Italic
+@mixin regular-italic-font {
+    font-family: skolar-sans-latin, sans-serif;
+    font-weight: 400;   
+    font-style: italic;
 }
 
-%raised-text {
-    text-shadow: 1px 1px 1px $white,
-                -1px -1px 1px $white,
-                -2px -2px 2px #9B9A9A,
-                2px 2px 2px #9B9A9A;
+// Skolar Sans Latin Bold Italic
+@mixin bold-italic-font {
+    font-family: skolar-sans-latin, sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
+
+
+// Skolar Sans Latin Black Italic
+@mixin black-italic-font {
+    font-family: skolar-sans-latin, sans-serif; 
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+$black: #33475B;
+$primary-color: #D72F3E;
+$secondary-color: #FFE23D;
+$white: #F5F5F5;
+
+
+$background-color: $white; 
+$text-color: $black; 
+$divider-color: $black; 
+$btn-color: $primary-color;
+$btn-text: $white;
+
+$h1-size: 2.25rem;
+$h2-size: 1.62671rem; 
+$h3-size: 1.38316rem;
+$h4-size: 1.1rem;
+$p-size: 1rem;
+$h5-size: 0.85028rem;
+$h6-size: 0.78405rem;
+
+
+@keyframes swipeBorder {
+    from {width: 100%;}
+    to { width: 0%;}
+}
+
+

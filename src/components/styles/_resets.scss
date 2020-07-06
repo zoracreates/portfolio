@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Prata&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url("https://use.typekit.net/ctm3dzd.css");
 
 html {
   -ms-text-size-adjust: 100%;
@@ -12,28 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-body,
-a, 
-li {
-  font-family: 'Lato', sans-serif;
-  
-
-}
-
-h1 {
-  font-family: 'Prata', serif;
-
-}
-h2, 
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
-
 
 article,
 aside,
@@ -87,9 +63,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -255,25 +229,23 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
+  font-size: $h1-size;
+  line-height: 1.2;
 }
 h2 {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-top: 2rem;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
+  font-size: $h2-size;
+  line-height: 1.2;
 }
 h3 {
   margin-left: 0;
@@ -283,12 +255,11 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
+  font-size: $h3-size;
+  line-height: 1.2;
 }
 h4 {
   margin-left: 0;
@@ -300,10 +271,9 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
+  font-size: $h4-size;
+  line-height: 1.2;
 }
 h5 {
   margin-left: 0;
@@ -315,10 +285,9 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
+  font-size: $h5-size;
+  line-height: 1.2;
 }
 h6 {
   margin-left: 0;
@@ -330,10 +299,9 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
+  font-size: $h6-size;
+  line-height: 1.2;
 }
 hgroup {
   margin-left: 0;
@@ -431,7 +399,7 @@ table {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1rem;
+  font-size: $h4-size;
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
