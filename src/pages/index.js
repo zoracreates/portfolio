@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
     <Layout active={'home'}>
       <SEO title="Home" />
       <main>
-        <div className={`hero-band background-img-band`}>
+        <div className={`hero-band`}>
           <WrapperLg>
             <h1>I'm Zoraida,<span>UX Designer/Researcher </span></h1>
             <p className={`hero-text wrapper-md`}>
