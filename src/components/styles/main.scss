@@ -268,7 +268,7 @@ body {
   }
 
 header a.btn{
-  margin-top: -5px;
+  margin-top: 1rem;
   border: 2px solid $background-color;
   padding: 2px 10px 5px 10px;  
   border-radius: 7px;
@@ -358,7 +358,7 @@ header a.btn::after {
   .hero-band h1 {
     margin-bottom: 10px;
     line-height: 1;
-    font-size: $h2-size ;
+    font-size: $h2-size * 1.12;
   }
 
 
@@ -559,6 +559,14 @@ header a.btn::after {
       }
   
     }
+
+    @media (min-width: 329px) {
+      header a.btn{
+        margin-top: -5px
+  
+      }
+    }
+
 
   @media (min-width: 769px) {
     .hero-band h1 {

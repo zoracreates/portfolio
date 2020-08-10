@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       <main>
         <div className={`hero-band`}>
           <WrapperLg>
-            <h1>I'm Zoraida,<span>UX Designer/Researcher </span></h1>
+            <h1>I'm Zoraida,<span> UX Designer/Researcher </span></h1>
             <p className={`hero-text wrapper-md`}>
               With a background in digital media design, web programming, and design research,
               I create and improve digital products and experiences. <a href="https://hwp.harvard.edu/people/zoraida-cabrera-mieles" target="_blank">I work at Harvard University</a>, and
