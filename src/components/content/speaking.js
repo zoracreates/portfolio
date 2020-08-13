@@ -35,7 +35,7 @@ const Speaking = ({ styleName }) => {
 
             <li>
               <h4>Qualitative UX Research for Beginners</h4>
-              <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-03"> Jun 3, 2019</time></p>
+              <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-03"> June 3, 2019</time></p>
               <p className={`u-small`}><span className={`label`}>Host:</span> Inclusive Tech Lab Boston at KAYAK</p>
             </li>
           </ul>
