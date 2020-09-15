@@ -18,8 +18,6 @@ const Writing = ({ styleName, children}) => {
           </li>
         </ul>
         </div>
-  
-
     </section>
   )
 }
