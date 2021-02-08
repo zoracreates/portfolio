@@ -14,7 +14,7 @@ const Speaking = ({ styleName }) => {
             <h3 className={`u-header`}>Videos</h3>
             <div className={`card no-hover-effect`}>
               <div className={`video-container`}>
-                <iframe title={`video of justify-yourself: space-between, with Katie Langerman`} width="560" height="315" src="https://www.youtube.com/embed/AtYyOGmOZkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title={`video of justify-yourself: space-between, with Katie Langerman`} width="560" height="315" src="https://www.youtube.com/embed/AtYyOGmOZkc" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 <h4>justify-yourself: space-between, with Katie Langerman</h4>
               </div>
             </div>
@@ -24,9 +24,15 @@ const Speaking = ({ styleName }) => {
 
 
           <div className={`col`}>
-          <h3 className={`u-header`}>More Past Talks</h3>
-
-          <ul className={`post-list card no-hover-effect`}>
+          <h3 className={`u-header`}>Audio</h3>
+            <div>
+            <div className={`video-container`}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ydAzSlfgKqo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <h4>Ser UX Researcher en Harvard University, interview by Píldoras UX</h4>
+            </div>
+            <p className={`u-small`}><span className={`label`}>Language:</span> Spanish</p>
+            </div>
+            {/* <ul className={`post-list card no-hover-effect`}>
             <li>
               <h4>UI/UX Careers Panel</h4>
               <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-19"> June 19, 2019</time> </p>
@@ -38,7 +44,7 @@ const Speaking = ({ styleName }) => {
               <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-03"> June 3, 2019</time></p>
               <p className={`u-small`}><span className={`label`}>Host:</span> Inclusive Tech Lab Boston at KAYAK</p>
             </li>
-          </ul>
+          </ul> */}
           </div>
         </div>
 

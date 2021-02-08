@@ -448,7 +448,8 @@ header a.btn::after {
   }
 
   /* home */
-  .video-container {
+  .video-container,
+  .audio-container {
     position: relative; 
     padding-bottom: 56.25%; 
     padding-top: 30px; 
@@ -458,6 +459,22 @@ header a.btn::after {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   }
 
+  .video-container h4,
+  .audio-container h4 {
+    font-size: 0px;
+  }
+
+  .audio-container iframe #content {
+    margin: 0px;
+  }
+
+  .audio-container  {
+    padding-bottom: 165px;
+  }
+
+  .audio-container iframe,
+  .audio-container object,
+  .audio-container embed,
   .video-container iframe, 
   .video-container object, 
   .video-container embed { 
@@ -469,6 +486,12 @@ header a.btn::after {
     -webkit-clip-path: inset(0% round 7x);
     clip-path: inset(0% round 7px);
   }
+
+  // .audio-container iframe,
+  // .audio-container object,
+  // .audio-container embed {
+  //   top: 10%
+  // }
 
   #post .video-container {
     margin: 20px 0;
