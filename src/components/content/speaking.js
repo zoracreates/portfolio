@@ -25,7 +25,7 @@ const Speaking = ({ styleName }) => {
 
           <div className={`col`}>
           <h3 className={`u-header`}>Audio</h3>
-            <div>
+            <div className={`card no-hover-effect`}>
             <div className={`video-container`}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ydAzSlfgKqo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             <h4>Ser UX Researcher en Harvard University, interview by Píldoras UX</h4>
