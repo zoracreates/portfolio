@@ -28,7 +28,7 @@ const SocialIcons = () => {
                     </a>
                 </li>
                 <li>
-                    <a href={`https://medium.com/@zoracreates`}>
+                    <a href={`https://zoracabrera.medium.com/`}>
                         <img src={Medium} alt={`Medium icon`} />
                         <span>Zoraida's Medium</span>
                     </a>
