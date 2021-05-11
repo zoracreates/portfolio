@@ -21,9 +21,9 @@ const IndexPage = ({ data }) => {
           <WrapperLg>
             <h1>I'm Zoraida,<span> UX Designer/Researcher </span></h1>
             <p className={`hero-text wrapper-md`}>
-              With a background in digital media design, web programming, and design research,
-              I create and improve digital products and experiences for <a href="https://hwp.harvard.edu/people/zoraida-cabrera-mieles" target="_blank" rel="noopener noreferrer">Harvard University</a>.
-              On a more personal note, I’m learning to become a better advocate for ethical and inclusive design.
+              A CSS nerd, and a lover of architecture and urbanism. 
+              I'm also extremely curious about human behavior and programming.
+              Working @ Harvard.
           </p>
           </WrapperLg>
         </div>
