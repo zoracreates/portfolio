@@ -30,6 +30,10 @@ body {
     @include regular-font;
 }
 
+h2 code {
+  font-size: $h2-size;
+}
+
 /* General layout */
 
 .background-img-band {
