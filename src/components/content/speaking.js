@@ -21,8 +21,6 @@ const Speaking = ({ styleName }) => {
 
           </div>
 
-
-
           <div className={`col`}>
           <h3 className={`u-header`}>Audio</h3>
             <div className={`card no-hover-effect`}>
@@ -32,19 +30,6 @@ const Speaking = ({ styleName }) => {
             </div>
             <p className={`u-small`}><span className={`label`}>Language:</span> Spanish</p>
             </div>
-            {/* <ul className={`post-list card no-hover-effect`}>
-            <li>
-              <h4>UI/UX Careers Panel</h4>
-              <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-19"> June 19, 2019</time> </p>
-              <p className={`u-small`}><span className={`label`}>Host:</span> Inclusive Tech Lab Boston at Launch Academy</p>
-            </li>
-
-            <li>
-              <h4>Qualitative UX Research for Beginners</h4>
-              <p className={`u-small`}><span className={`label`}>Date:</span> <time dateTime="2019-06-03"> June 3, 2019</time></p>
-              <p className={`u-small`}><span className={`label`}>Host:</span> Inclusive Tech Lab Boston at KAYAK</p>
-            </li>
-          </ul> */}
           </div>
         </div>
 
