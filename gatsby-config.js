@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Zoraida Cabrera-Mieles — Designer & Researcher`,
-    description: `Zoraida Cabrera-Mieles User Experience Designer portfolio`,
+    title: `Zoraida Cabrera-Mieles — Designer`,
+    description: `Zoraida Cabrera-Mieles Design portfolio`,
     author: `@zoracreates`,
-    keywords:  `UX, User Experience, User Interface, User Research, Designer, HTML, CSS, JavaScript, Zoraida Cabrera-Mieles, Zoraida Cabrera"`,
+    keywords:  `Design Engineering, Web Design, Front End Development, Front End Design, UX, User Experience, User Interface, User Research, Designer, HTML, CSS, JavaScript, Zoraida Cabrera-Mieles, Zoraida Cabrera"`,
   },
   plugins: [
     {
