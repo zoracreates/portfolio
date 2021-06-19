@@ -19,7 +19,7 @@ export default function PageTemplate({ data, pageContext }) {
 
   return (
     <>
-      <PostSEO title={frontmatter.title} tags={frontmatter.tags} />
+      <PostSEO title={frontmatter.title} tags={frontmatter.tags} description={frontmatter.description} />
 
       <Layout active={`post`}>
         <BlogPostWrapper>
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
         title
         tags
         date (formatString: "MMMM DD, YYYY ")
+        description
       }
     }
   }
