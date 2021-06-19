@@ -9,15 +9,6 @@ export const WrapperLg = ({ children, styleName }) => {
     )
 }
 
-export const CenterTextBand = ({ children, sectionTitle, styleName }) => {
-    return (
-        <section className={`text-center block-center wrapper-md band ${styleName ? styleName : ''}`}>
-            <h2>{sectionTitle}</h2>
-            {children}
-        </section>
-    )
-}
-
 export const BlogPostWrapper = ({ children, styleName }) => {
     return (
         <div>
@@ -28,16 +19,11 @@ export const BlogPostWrapper = ({ children, styleName }) => {
     )
 }
 
-CenterTextBand.propTypes = {
-    sectionTitle: PropTypes.string.isRequired,
-    styleName: PropTypes.string
-}
 
 WrapperLg.propTypes = {
     styleName: PropTypes.string
 }
 
-
-CenterTextBand.defaultProps = {
-    sectionTitle: ``,
+BlogPostWrapper.propTypes = {
+    styleName: PropTypes.string
 }

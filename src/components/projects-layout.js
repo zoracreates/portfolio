@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import { BlogPostWrapper } from "./wrappers"
 
 
-export default function PostTemplate({ data, pageContext }) {
+export default function ProjectTemplate({ data, pageContext }) {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
   const navExists = () => {
@@ -23,6 +23,7 @@ export default function PostTemplate({ data, pageContext }) {
 
       <Layout active={`post`}>
         <BlogPostWrapper>
+         <h3>Project post</h3>
           <h1>{frontmatter.title}</h1>
           <main>
             <p className={`u-small`}><span className={`label`}>Posted</span> {frontmatter.date}</p>
@@ -63,8 +64,10 @@ export default function PostTemplate({ data, pageContext }) {
   )
 }
 export const pageQuery = graphql`
-  query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
+  query ProjectQuery($id: String) {
+    
+    mdx(
+    id: { eq: $id }) {
       id
       body
       frontmatter {

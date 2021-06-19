@@ -86,11 +86,12 @@ export const pageQuery = graphql`
   query recentPosts {
     allMdx (
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { frontmatter: { published: { eq: true } }, fileAbsolutePath: {regex: "/posts/blog/"} }
       limit: 2
       ) {
       edges {
         node {
+          fileAbsolutePath
           id
           excerpt(pruneLength: 100)
           frontmatter {
