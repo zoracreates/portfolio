@@ -25,6 +25,7 @@ const IndexPage = ({ data }) => {
               I'm also extremely curious about human behavior and programming.
               Working @ Harvard.
           </p>
+           <Link className="btn" to={"/work"}>Check Out My Work</Link>
           </WrapperLg>
         </div>
 
@@ -59,9 +60,6 @@ const IndexPage = ({ data }) => {
 
           <h2 className={`col`}>Get In Touch</h2>
 
-
-
-
           <div className={`col no-hover-effect cta`}>
             <h4>Want to work together?</h4>
             <p>If you're looking for a speaker, writer, or
@@ -70,8 +68,6 @@ const IndexPage = ({ data }) => {
             <a className={`btn`} href="mailto:zmcabrera@gmail.com">Email Me</a>
 
           </div>
-
-
 
         </section>
 

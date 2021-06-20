@@ -32,6 +32,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 const path = require("path")
 
+//create blog pages
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
@@ -76,7 +77,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // (or `node.frontmatter.slug`)
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/posts-layout.js`),
+      component: path.resolve(`./src/components/posts-blog-layout.js`),
       // You can use the values in this context in
       // our page layout component
       context: {
@@ -87,11 +88,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-
-    const workResult = await graphql(`
+  //create work pages
+  const workResult = await graphql(`
     query WorkQuery {
       allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___title], order: DESC }
         filter: { frontmatter: { published: { eq: true } } , fileAbsolutePath: {regex: "/posts/work/"} }
       ){
         edges {
@@ -111,7 +112,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   if (workResult.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for blog')
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for work')
   }
 
   // Create work post pages.
@@ -130,7 +131,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // (or `node.frontmatter.slug`)
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/projects-layout.js`),
+      component: path.resolve(`./src/components/work-posts/posts-work-layout.js`),
       // You can use the values in this context in
       // our page layout component
       context: {

@@ -41,6 +41,12 @@ h2 code {
   max-width: 2000px;
   width: 100%;
 }
+
+.wrapper-xlg {
+    width: 92%;
+    max-width: 2000px;
+    margin: 0 auto 35px auto;
+}
   
 .wrapper-lg {
     width: 92%;
@@ -202,9 +208,18 @@ h2 code {
  .u-small {
    font-size: $h6-size;
  }
+
+
   
 
 /* cards and blocks appearence */
+
+  .card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .card h2 a:after,
   .card h4 a:after {
     content: '';
@@ -254,7 +269,7 @@ h2 code {
   a.text-btn,
   a.btn  {
     @include black-font;
-}
+  }
   a.btn {
     text-decoration: none;
     color: $btn-text;
@@ -271,6 +286,7 @@ h2 code {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   }
 
+.hero-band a.btn,
 header a.btn{
   margin-top: 1rem;
   border: 2px solid $background-color;
@@ -279,6 +295,7 @@ header a.btn{
   transition: 0.4s ease-in;
 }
 
+.hero-band a.btn:hover,
 header a.btn:hover  {
   background-color: $background-color;
   color: $primary-color;
@@ -379,6 +396,11 @@ header a.btn::after {
 
   /* blog and post styles */
 
+#post .featured-image {
+   max-width: 600px;
+   margin: auto;
+ }
+
   #post header {
     margin-bottom: 0px;
   }
@@ -448,7 +470,7 @@ header a.btn::after {
   
   .post-list li {
     list-style: none;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
 
   /* home */
@@ -491,11 +513,6 @@ header a.btn::after {
     clip-path: inset(0% round 7px);
   }
 
-  // .audio-container iframe,
-  // .audio-container object,
-  // .audio-container embed {
-  //   top: 10%
-  // }
 
   #post .video-container {
     margin: 20px 0;
@@ -547,7 +564,6 @@ header a.btn::after {
   blockquote p,
   blockquote span {
     line-height: 1.2;
-
   }
 
     /* Gird classes */
@@ -558,19 +574,28 @@ header a.btn::after {
   
 
     @media (min-width: 768px) {
-      .cols-20-80 {
+      .cols-20-80,
+      .col-40-60 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
       
+      .cols-40-60 > .col:first-child {
+           flex-basis: 37%;
+      }
 
       .cols-20-80 > .col:first-child {
         flex-basis: 17%;
       }
   
-      .cols-20-80 > h2.col:first-child {
+      .cols-20-80 > h2.col:first-child,
+      .cols-40-60 > h2.col:first-child {
         margin-top: 0px;
+      }
+
+      .cols-40-60 > .col {
+        flex-basis: 60%;
       }
   
       .cols-20-80 > .col {
@@ -581,6 +606,12 @@ header a.btn::after {
         .cols-20-80 {
           display: grid;
           grid-template-columns: 1fr 5fr;
+          grid-gap: 0px 35px;
+        }
+
+        .cols-40-60 {
+          display: grid;
+          grid-template-columns: 2fr 3fr;
           grid-gap: 0px 35px;
         }
       }
