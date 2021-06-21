@@ -26,7 +26,7 @@ const ProjectOverview = (
 
     return (
         <div className={`project-overview-container`}>
-            <section className={`wrapper-md block-center`}>
+            <section className={`block-center`}>
                 <h2>Project Overview</h2>
 
                 <h3>Summary</h3>
