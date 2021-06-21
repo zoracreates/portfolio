@@ -6,13 +6,15 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import PostSEO from "../posts-seo"
 import Layout from "../layout"
 import { Link } from "gatsby"
-import { WorkPostWrapper, WrapperSmCenter } from "../wrappers"
+import { WorkPostWrapper } from "../wrappers"
+import ProjectHeader from './ProjectHeader'
+import ProjectOverview from './ProjectOverview'
 
 
-export default function ProjectTemplate({ data, pageContext, children}) {
+export default function ProjectTemplate({ data, pageContext}) {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
-  const shortcodes = { WrapperSmCenter }
+  const shortcodes = { ProjectOverview, Img}
 
   const navExists = () => {
     if (previous != null || next != null) {
@@ -29,14 +31,13 @@ export default function ProjectTemplate({ data, pageContext, children}) {
         <MDXProvider components={shortcodes}>
           <WorkPostWrapper>
             <main>
-             <WrapperSmCenter>
+              <ProjectHeader
+                title={frontmatter.title}
+                imgSrc={frontmatter.featuredImage}
+                imgAlt={frontmatter.featuredImageAlt}
+              />
 
-              <Img className="featured-image" fluid={frontmatter.featuredImage.childImageSharp.fluid} alt={frontmatter.featuredImageAlt} />
-              
-              <h1>{frontmatter.title}</h1>
-
-              </WrapperSmCenter>
-              <MDXRenderer>
+              <MDXRenderer frontmatter={frontmatter}>
                 {body}
               </MDXRenderer>
             </main>

@@ -22,7 +22,6 @@ class Header extends React.Component {
             <li className={`${this.state.activeWork}`}><Link to="/work">Work</Link></li>
             <li className={`${this.state.activeBlog}`}><Link to="/blog">Blog</Link></li>
           </ul>
-          
         </div>
         
       </header>

@@ -25,8 +25,6 @@ export const WrapperSmCenter = ({ children, styleName }) => {
     )
 }
 
-
-
 export const BlogPostWrapper = ({ children, styleName }) => {
     return (
         <div>
@@ -40,7 +38,7 @@ export const BlogPostWrapper = ({ children, styleName }) => {
 export const WorkPostWrapper = ({ children, styleName }) => {
     return (
         <div>
-            <article className={`wrapper-xlg block-center ${styleName ? styleName : ''}`}>
+            <article className={`project ${styleName ? styleName : ''}`}>
                 {children}
             </article>
         </div>

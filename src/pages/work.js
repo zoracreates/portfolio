@@ -24,7 +24,7 @@ const WorkIndex = ({ data }) => {
         <ul className={`post-list block-center`}>
         {posts.map(({ node: post }) => (
           <li className={`card cols-40-60`} key={post.id}>
-            <div className={`col`}>
+            <div className={`col featured-image`}>
                 <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} alt={post.frontmatter.featuredImageAlt} />
             </div>
             <div className={`col card-title`}>
