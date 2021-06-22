@@ -13,8 +13,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // remote CMS you could also check to see if the parent node was a
   // `File` node here
   if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode })
-
+    const postPath = createFilePath({ node, getNode })
+    
     createNodeField({
       // Name of the field you are adding
       name: "slug",
@@ -23,25 +23,29 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       // Generated value based on filepath with "blog" prefix. you
       // don't need a separating "/" before the value because
       // createFilePath returns a path with the leading "/".
-      value: `/blog${value}`,
+      value: `${postPath}`,
     })
   }
+
+
 }
 
 const path = require("path")
 
+//create blog pages
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions
 
-  const result = await graphql(`
-    query {
+  const blogResult = await graphql(`
+    query PostQuery {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { published: { eq: true } } }
+        filter: { frontmatter: { published: { eq: true } } , fileAbsolutePath: {regex: "/posts/blog/"} }
       ){
         edges {
           node {
+            fileAbsolutePath
             id
             fields {
               slug
@@ -55,25 +59,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  if (blogResult.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for blog')
   }
 
   // Create blog post pages.
-  const posts = result.data.allMdx.edges
+  const blogPosts = blogResult.data.allMdx.edges
 
   // you'll call `createPage` for each result
-  posts.forEach(({ node }, index) => {
+  blogPosts.forEach(({ node }, index) => {
 
-    const previous = index === posts.length - 1 ? null : posts[index + 1];
-    const next = index === 0 ? null : posts[index - 1];
+    const previous = index === blogPosts.length - 1 ? null : blogPosts[index + 1];
+    const next = index === 0 ? null : blogPosts[index - 1];
 
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
       path: node.fields.slug,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/posts-layout.js`),
+      component: path.resolve(`./src/components/posts-blog-layout.js`),
       // You can use the values in this context in
       // our page layout component
       context: {
@@ -83,4 +87,65 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  //create work pages
+  const workResult = await graphql(`
+    query WorkQuery {
+      allMdx(
+        sort: { fields: [frontmatter___title], order: DESC }
+        filter: { frontmatter: { published: { eq: true } } , fileAbsolutePath: {regex: "/posts/work/"} }
+      ){
+        edges {
+          node {
+            fileAbsolutePath
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (workResult.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for work')
+  }
+
+  // Create work post pages.
+  const workPosts = workResult.data.allMdx.edges
+
+
+
+  // you'll call `createPage` for each result
+  workPosts.forEach(({ node }, index) => {
+
+    const previous = index === workPosts.length - 1 ? null : workPosts[index + 1];
+    const next = index === 0 ? null : workPosts[index - 1];
+
+    createPage({
+      // This is the slug you created before
+      // (or `node.frontmatter.slug`)
+      path: node.fields.slug,
+      // This component will wrap our MDX content
+      component: path.resolve(`./src/components/work-posts/posts-work-layout.js`),
+      // You can use the values in this context in
+      // our page layout component
+      context: {
+        id: node.id,
+        previous: previous,
+        next: next,
+      },
+    })
+  })
+
+
 }
+
+
+
+
+

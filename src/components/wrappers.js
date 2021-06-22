@@ -1,6 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+export const WrapperXlg = ({ children, styleName }) => {
+    return (
+        <div className={`wrapper-xlg ${styleName ? styleName : ''}`}>
+            {children}
+        </div>
+    )
+}
+
 export const WrapperLg = ({ children, styleName }) => {
     return (
         <div className={`wrapper-lg ${styleName ? styleName : ''}`}>
@@ -9,12 +17,11 @@ export const WrapperLg = ({ children, styleName }) => {
     )
 }
 
-export const CenterTextBand = ({ children, sectionTitle, styleName }) => {
+export const WrapperSmCenter = ({ children, styleName }) => {
     return (
-        <section className={`text-center block-center wrapper-md band ${styleName ? styleName : ''}`}>
-            <h2>{sectionTitle}</h2>
+        <div className={`wrapper-sm block-center ${styleName ? styleName : ''}`}>
             {children}
-        </section>
+        </div>
     )
 }
 
@@ -28,16 +35,33 @@ export const BlogPostWrapper = ({ children, styleName }) => {
     )
 }
 
-CenterTextBand.propTypes = {
-    sectionTitle: PropTypes.string.isRequired,
+export const WorkPostWrapper = ({ children, styleName }) => {
+    return (
+        <div>
+            <article className={`project ${styleName ? styleName : ''}`}>
+                {children}
+            </article>
+        </div>
+    )
+}
+
+WrapperXlg.propTypes = {
     styleName: PropTypes.string
 }
+
 
 WrapperLg.propTypes = {
     styleName: PropTypes.string
 }
 
+WrapperSmCenter.propTypes = {
+    styleName: PropTypes.string
+}
 
-CenterTextBand.defaultProps = {
-    sectionTitle: ``,
+BlogPostWrapper.propTypes = {
+    styleName: PropTypes.string
+}
+
+WorkPostWrapper.propTypes = {
+    styleName: PropTypes.string
 }

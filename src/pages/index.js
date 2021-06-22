@@ -21,10 +21,10 @@ const IndexPage = ({ data }) => {
           <WrapperLg>
             <h1>I'm Zoraida, <span>Designer, Programmer &amp; Researcher</span> </h1>
             <p className={`hero-text wrapper-md`}>
-              A CSS nerd, art lover, and a usability and accessibility advocate. 
-              I'm also extremely curious about human behavior and programming.
+              I'm a CSS nerd, an art lover, and usability and accessibility advocate. <br/>
               Working @ Harvard.
           </p>
+           <Link className="btn" to={"/work"}>Check Out My Work</Link>
           </WrapperLg>
         </div>
 
@@ -59,9 +59,6 @@ const IndexPage = ({ data }) => {
 
           <h2 className={`col`}>Get In Touch</h2>
 
-
-
-
           <div className={`col no-hover-effect cta`}>
             <h4>Want to work together?</h4>
             <p>If you're looking for a speaker, writer, or
@@ -70,8 +67,6 @@ const IndexPage = ({ data }) => {
             <a className={`btn`} href="mailto:zmcabrera@gmail.com">Email Me</a>
 
           </div>
-
-
 
         </section>
 
@@ -86,11 +81,12 @@ export const pageQuery = graphql`
   query recentPosts {
     allMdx (
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { frontmatter: { published: { eq: true } }, fileAbsolutePath: {regex: "/posts/blog/"} }
       limit: 2
       ) {
       edges {
         node {
+          fileAbsolutePath
           id
           excerpt(pruneLength: 100)
           frontmatter {

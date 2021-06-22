@@ -11,6 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function PostSEO({ description, lang, meta, title, tags }) {
+  
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -65,7 +66,7 @@ function PostSEO({ description, lang, meta, title, tags }) {
         },
         {
           name: `twitter:title`,
-          content: site.siteMetadata.title,
+          content: title,
         },
         {
           name: `twitter:description`,

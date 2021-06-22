@@ -54,6 +54,8 @@ $text-color: $black;
 $divider-color: $black; 
 $btn-color: $primary-color;
 $btn-text: $white;
+$secondary-black: lighten($black, 15%);
+$primary-color-dark: darken($primary-color, 5%);
 
 $h1-size: 2.25rem;
 $h2-size: 1.62671rem; 
