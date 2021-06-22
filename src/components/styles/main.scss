@@ -400,6 +400,13 @@ p.hero-text {
   margin-bottom: 0px;
 }
 
+#post {
+  ol,
+  ul {
+    padding-left: 2rem;
+  }
+}
+
 #post > div {
   padding: 35px 0px;
 }
@@ -486,17 +493,11 @@ ul.post-list {
 
   blockquote {
     p {
-      width: 100%
+      width: 100%;
     }
   }
 
-  ol,
-  ul {
-    padding-left: 2rem;
-  }
-
   .project-overview-container {
-
     ol,
     ul {
       padding-left: 0px;
@@ -547,7 +548,7 @@ ul.post-list {
 
   h4 {
     font-weight: 700;
-    margin-top: 1rem; 
+    margin-top: 1rem;
   }
 
   p,
@@ -560,6 +561,13 @@ ul.post-list {
   margin-top: 1rem;
 }
 
+#post {
+  .project-tools,
+  .project-responsabilities,
+  .grid-list {
+    padding-left: 0px;
+  }
+}
 .project-tools,
 .project-responsabilities,
 .grid-list {
@@ -603,13 +611,12 @@ ul.post-list {
 }
 
 @media (min-width: 500px) {
-
   @supports (display: grid) {
     .project-tools {
       font-size: $h6-size;
       font-weight: bold;
     }
-  
+
     .project-tools,
     .project-responsabilities,
     .grid-list {
@@ -617,8 +624,6 @@ ul.post-list {
     }
   }
 }
-
-
 
 .project-tools li {
   text-align: center;
@@ -675,8 +680,6 @@ ul.post-list {
 .tool-qualtrics::before {
   background-image: url(../../images/work/tools/qualtrics.png);
 }
-
-
 
 /* home */
 .video-container,
@@ -759,7 +762,6 @@ blockquote p {
   padding-left: 20px;
   margin-bottom: 5px;
 }
-
 
 blockquote span {
   display: block;

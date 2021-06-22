@@ -17,11 +17,11 @@ const ProjectOverview = (
         return lowerCaseText.replace(/\s/g, "-");
     }
 
-    let listResponsabilites = (list) => list.map((responsability) => <li><a href={`#${createPropertyValue(responsability)}`}>{responsability}</a></li>);
+    let listResponsabilites = (list) => list.map((responsability, id) => <li key={id}><a href={`#${createPropertyValue(responsability)}`}>{responsability}</a></li>);
 
     let responsabilites = responsabilitiesList ? <ul className="project-responsabilities"> {listResponsabilites(responsabilitiesList)}</ul> : <p>{responsabilitiesSummary}</p>
 
-    let tools = toolsList.map((tool) => <li className={`tool-${createPropertyValue(tool)}`}>{tool}</li>);
+    let tools = toolsList.map((tool, id) => <li key={id} className={`tool-${createPropertyValue(tool)}`}>{tool}</li>);
 
 
     return (
