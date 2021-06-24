@@ -69,7 +69,7 @@ Instead, we focused on emphasizing actions people could take to participate in M
 <h3 id="website-theming-and-design-engineering">Website Theming and Design Engineering</h3>
 
 #### Next, I used CSS and JavaScript to theme the website. During this process, I had to adjust the styles for the Seminar page due to the markup.
-We built the website using a content management system called OpenScholar. As a CMS, OpenScholar offers a variety of widgets. On the Seminar page, we used a List of Posts widget to load a dynamic list of seminars and reduce content creation overhead. Unfortunately, this approach placed the title of the seminar above the seminar’s featured image. Per design, the title needed to be below the image. 
+We built the website using a content management system (CMS) called OpenScholar. As a CMS, OpenScholar offers a variety of widgets. On the Seminar page, we used a List of Posts widget to load a dynamic list of seminars and reduce content creation overhead. Unfortunately, this approach placed the title of the seminar above the seminar’s featured image. Per design, the title needed to be below the image. 
 
 Due to the widget markup, I could not find a CSS solution to reverse this order, and a JavaScript solution meant potential negative performance and maintenance implications. Therefore I opted for placing the title above the image.
 ![using Chrome Dev Tools to inspect a seminar card](../../images/work/2020-mahindra/seminar-card.png)
