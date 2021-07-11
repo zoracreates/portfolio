@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       <main>
         <div className={`hero-band`}>
           <WrapperLg>
-            <h1>I'm Zoraida, <span>Designer, Programmer &amp; Researcher</span> </h1>
+            <h1>I'm Zoraida, <span>Designer &amp; Researcher</span> </h1>
             <p className={`hero-text wrapper-md`}>
               I'm a CSS nerd, an art lover, and usability and accessibility advocate. <br/>
               Working @ Harvard.
