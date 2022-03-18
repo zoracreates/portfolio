@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
           <WrapperLg>
             <h1>I'm Zoraida, <span>Designer &amp; Researcher</span> </h1>
             <p className={`hero-text wrapper-md`}>
-              I'm a CSS nerd, an art lover, and usability and accessibility advocate. <br/>
+              I'm usability and accessibility advocate, a CSS nerd, and an art lover. <br/>
               Working @ Harvard.
           </p>
            <Link className="btn" to={"/work"}>Check Out My Work</Link>
