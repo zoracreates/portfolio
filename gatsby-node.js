@@ -63,7 +63,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for blog')
   }
 
-  // Create blog post pages
+  // Create blog post pages.
   const blogPosts = blogResult.data.allMdx.edges
 
   // you'll call `createPage` for each result
@@ -92,7 +92,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const workResult = await graphql(`
     query WorkQuery {
       allMdx(
-        sort: { fields: [frontmatter___title], order: DESC }
+        sort: { fields: [frontmatter___importance], order: ASC }
         filter: { frontmatter: { published: { eq: true } } , fileAbsolutePath: {regex: "/posts/work/"} }
       ){
         edges {
