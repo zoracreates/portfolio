@@ -53,7 +53,7 @@ const WorkIndex = ({ data }) => {
 export const pageQuery = graphql`
   query workIndex {
     allMdx (
-      sort: { fields: [frontmatter___date], order: DESC }
+     sort: { fields: [frontmatter___importance], order: ASC }
       filter: { frontmatter: { published: { eq: true } }, fileAbsolutePath: {regex: "/posts/work/"} }
       ) {
       edges {
