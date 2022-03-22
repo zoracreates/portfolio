@@ -63,7 +63,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query for blog')
   }
 
-  // Create blog post pages.
+  // Create blog post pages
   const blogPosts = blogResult.data.allMdx.edges
 
   // you'll call `createPage` for each result
